@@ -1,0 +1,17 @@
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\SampleWebAPI.deps.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\SampleWebAPI.runtimeconfig.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\SampleWebAPI.runtimeconfig.dev.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\SampleWebAPI.dll
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\SampleWebAPI.pdb
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.RazorAssemblyInfo.cache
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.RazorAssemblyInfo.cs
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.AssemblyInfoInputs.cache
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.AssemblyInfo.cs
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.dll
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.pdb
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\bin\Debug\netcoreapp2.2\Data\SampleData.json
+C:\Users\sreichert\source\repos\ReichertSample\SampleWebAPI\obj\Debug\netcoreapp2.2\SampleWebAPI.csprojAssemblyReference.cache

@@ -1,0 +1,66 @@
+{
+  "Clients": [
+    {
+      "Id": 1,
+      "FirstName": "Bob",
+      "LastName": "Loblaw"
+    },
+    {
+      "Id": 2,
+      "FirstName": "Bob",
+      "LastName": "Fett"
+    },
+    {
+      "Id": 3,
+      "FirstName": "Tank",
+      "LastName": "Law"
+    }
+  ],
+  "Investments": [
+    {
+      "Id": 10,
+      "Stock": {
+        "Symbol": "CHC",
+        "Name": "Conhugeco"
+      },
+      "PurchasePrice": 0.37,
+      "Quantity": 500,
+      "PurchaseDate": "2/2/2018",
+      "ClientOwnerId": 1
+    },
+    {
+      "Id": 11,
+      "Stock": {
+        "Symbol": "ABD",
+        "Name": "Giggle"
+      },
+      "PurchasePrice": 2.01,
+      "Quantity": 200,
+      "PurchaseDate": "4/2/2020",
+      "ClientOwnerId": 1
+    },
+    {
+      "Id": 20,
+      "Stock": {
+        "Symbol": "ABD",
+        "Name": "Giggle"
+      },
+      "PurchasePrice": 1.11,
+      "Quantity": 100,
+      "PurchaseDate": "8/2/2019",
+      "ClientOwnerId": 2
+    },
+    {
+      "Id": 30,
+      "Stock": {
+        "Symbol": "YYZ",
+        "Name": "Ziper"
+      },
+      "PurchasePrice": 0.82,
+      "Quantity": 42,
+      "PurchaseDate": "2/5/2015",
+      "ClientOwnerId": 3
+    }
+
+  ]
+}
