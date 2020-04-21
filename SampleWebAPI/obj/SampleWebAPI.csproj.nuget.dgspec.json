@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sreichert\\source\\repos\\ReichertSample\\SampleWebAPI\\SampleWebAPI.csproj": {}
+    "C:\\Users\\sreichert\\source\\repos\\CodingExercise\\SampleWebAPI\\SampleWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sreichert\\source\\repos\\ReichertSample\\SampleWebAPI\\SampleWebAPI.csproj": {
+    "C:\\Users\\sreichert\\source\\repos\\CodingExercise\\SampleWebAPI\\SampleWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sreichert\\source\\repos\\ReichertSample\\SampleWebAPI\\SampleWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\sreichert\\source\\repos\\CodingExercise\\SampleWebAPI\\SampleWebAPI.csproj",
         "projectName": "SampleWebAPI",
-        "projectPath": "C:\\Users\\sreichert\\source\\repos\\ReichertSample\\SampleWebAPI\\SampleWebAPI.csproj",
+        "projectPath": "C:\\Users\\sreichert\\source\\repos\\CodingExercise\\SampleWebAPI\\SampleWebAPI.csproj",
         "packagesPath": "C:\\Users\\sreichert\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sreichert\\source\\repos\\ReichertSample\\SampleWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\sreichert\\source\\repos\\CodingExercise\\SampleWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -69,7 +69,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

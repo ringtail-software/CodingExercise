@@ -28,7 +28,7 @@ namespace SampleWebAPI.Controllers
             return Ok(new InvestmentServices().GetAllInvestments(ClientId));
         }
 
-        // Returns the investment details of  Investment Id = InvestmentId
+        // Returns the investment details of Investment Id = InvestmentId
         [Route("client/investment/detail/{InvestmentId}")]
         public IActionResult GetInvestmentDetail(int InvestmentId)
         {

@@ -1,0 +1,10 @@
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\bin\Debug\SampleDbProject.dacpac
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\bin\Debug\SampleDbProject.dll
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\bin\Debug\SampleDbProject.pdb
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\SampleDbProject.sqlprojAssemblyReference.cache
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\Model.xml
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\refactor.xml
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\postdeploy.sql
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\predeploy.sql
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\SampleDbProject.dll
+C:\Users\sreichert\source\repos\CodingExercise\SampleDbProject\obj\Debug\SampleDbProject.pdb

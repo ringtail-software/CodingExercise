@@ -38,9 +38,9 @@ namespace SampleWebAPI.Data
             var dataFile = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Data", "SampleData.json"));
             JObject data = JObject.Parse(dataFile);
             List<Investment> investments = data.SelectToken("Investments").ToObject<List<Investment>>();
-            if (investments == null)
+            if (investments == null || !investments.Where(inv => inv.Id == InvestmentId).Any())
                 return null;
-            return investments.Where(inv => inv.Id == InvestmentId).First() ?? null;
+            return investments.Where(inv => inv.Id == InvestmentId).First();
         }
 
     }
