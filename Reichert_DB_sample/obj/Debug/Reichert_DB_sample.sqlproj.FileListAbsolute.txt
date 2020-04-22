@@ -1,0 +1,6 @@
+C:\Users\sreichert\source\repos\Reichert_DB_sample\bin\Debug\Reichert_DB_sample.dacpac
+C:\Users\sreichert\source\repos\Reichert_DB_sample\bin\Debug\Reichert_DB_sample.dll
+C:\Users\sreichert\source\repos\Reichert_DB_sample\bin\Debug\Reichert_DB_sample.pdb
+C:\Users\sreichert\source\repos\Reichert_DB_sample\obj\Debug\Reichert_DB_sample.sqlprojAssemblyReference.cache
+C:\Users\sreichert\source\repos\Reichert_DB_sample\obj\Debug\Reichert_DB_sample.dll
+C:\Users\sreichert\source\repos\Reichert_DB_sample\obj\Debug\Reichert_DB_sample.pdb
