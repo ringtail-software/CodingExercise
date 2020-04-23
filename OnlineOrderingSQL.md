@@ -1,11 +1,12 @@
 # Online Ordering
 
 ## General instructions:
-Please keep in mind that this exercise is intended to be achievable in a couple of hours.  Assume that this will be part of a larger system.  If there are larger considerations, that would have affected decisions of what is in/out of scope, please make note of your assumptions.  We use SQL server for our database for Nuix Discover and would like this to be written in T-SQL.  Any middle tier/UI code is out of scope. Assume any data sent from middle tier/UI will be sent the way you require. Likewise returned data can be done any way you like. Security and error handling are out of scope. Assume the front end is sending you good data,
-Problem statement:
+Please keep in mind that this exercise is intended to be achievable in a couple of hours.  Assume that this will be part of a larger system.  If there are larger considerations, that would have affected decisions of what is in/out of scope, please make note of your assumptions.  We use SQL server for our database for Nuix Discover and would like this to be written in T-SQL.  Any middle tier/UI code is out of scope. Assume any data sent from middle tier/UI will be sent the way you require. Likewise returned data can be done any way you like. Security and error handling are out of scope. Assume the front end is sending you good data.
+
+## Problem statement:
 The company you are working for is building an online ordering system. They are expecting millions of orders in this system so scale and performance is a concern. Your tasks will be limited to a small subset of the database code.
 
-## Problem statement/user stories:
+## User stories:
 
 1.	Products:
     - As an owner I would like to store a list of products I have to sell in the data base along with their current cost
