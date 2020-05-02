@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using InvestmentAPI.Contexts;
+using InvestmentAPI.SeedData;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace InvestmentAPI
 {
@@ -14,7 +10,17 @@ namespace InvestmentAPI
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var host = CreateWebHostBuilder(args).Build();
+
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context = services.GetRequiredService<InvestmentContext>();
+
+                DataGenerator.Initialize(services);
+            }
+
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
