@@ -1,5 +1,6 @@
 ﻿using InvestmentAPI.Contexts;
 using InvestmentAPI.Models;
+using InvestmentAPI.Utility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -39,14 +40,22 @@ namespace InvestmentAPI.SeedData
                     SystemId = 100,
                     InvestmentId = 1,
                     Shares = rand.Next(1, 20),
-                    CostBasisPerShare = 297.31,
+                    CostBasisPerShare = Math.Round(rand.NextDouble() * 500, 2),
                     CurrentPrice = 0,
                     CurrentValue = 0,
                     Term = 0,
                     NetValuation = 0
                 };
 
+                inv1Detail.CurrentPrice = InvestmentCalculator.GeneratePrice(inv1Detail.CostBasisPerShare);
+                inv1Detail.CurrentValue = InvestmentCalculator.DetermineValue(inv1Detail.Shares, inv1Detail.CurrentPrice);
+                inv1Detail.NetValuation = InvestmentCalculator.DetermineNetValuation(inv1Detail.CurrentValue,
+                                                                                     inv1Detail.Shares,
+                                                                                     inv1Detail.CostBasisPerShare);
 
+                context.Investments.Add(inv1);
+                context.InvestmentDetails.Add(inv1Detail);
+                context.SaveChanges();
             }
         }
     }
