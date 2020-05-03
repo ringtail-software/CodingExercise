@@ -17,7 +17,7 @@ namespace InvestmentAPI.SeedData
             {
                 Random rand = new Random();
 
-                if (context.Investments.Any())
+                /*if (context.Investments.Any())
                 {
                     return;
                 }
@@ -25,7 +25,7 @@ namespace InvestmentAPI.SeedData
                 if (context.InvestmentDetails.Any())
                 {
                     return;
-                }
+                }*/
 
                 var inv1 = new Investment()
                 {

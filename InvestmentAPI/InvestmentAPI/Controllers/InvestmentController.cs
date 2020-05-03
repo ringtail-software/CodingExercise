@@ -18,7 +18,7 @@ namespace InvestmentAPI.Controllers
         }
 
         // GET api/investment/id
-        [HttpGet("{id}")]
+        [HttpGet("{userId}")]
         public ActionResult<List<Investment>> GetInvestmentByUserId(int userId)
         {
             var investments = _investmentDataService.GetInvestmentByUserId(userId);
@@ -32,7 +32,7 @@ namespace InvestmentAPI.Controllers
         }
 
         // GET api/values/5
-        [HttpGet]
+        [HttpGet("detail/{id}")]
         public ActionResult<InvestmentDetail> GetInvestmentDetailById(int id)
         {
             var investmentDetail = _investmentDataService.GetInvestmentDetailById(id);
