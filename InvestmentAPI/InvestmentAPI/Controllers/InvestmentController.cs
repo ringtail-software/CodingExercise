@@ -1,8 +1,8 @@
-﻿using System;
+﻿using InvestmentAPI.Models;
+using InvestmentAPI.Services.Data;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
 namespace InvestmentAPI.Controllers
 {
@@ -10,36 +10,39 @@ namespace InvestmentAPI.Controllers
     [ApiController]
     public class InvestmentController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private IInvestmentDataService _investmentDataService;
+
+        public InvestmentController(IInvestmentDataService investmentDataService)
         {
-            return new string[] { "value1", "value2" };
+            _investmentDataService = investmentDataService;
+        }
+
+        // GET api/investment/id
+        [HttpGet("{id}")]
+        public ActionResult<List<Investment>> GetInvestmentByUserId(int userId)
+        {
+            var investments = _investmentDataService.GetInvestmentByUserId(userId);
+
+            if (!investments.Any()) 
+            {
+                return BadRequest();
+            }
+
+            return investments;
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet]
+        public ActionResult<InvestmentDetail> GetInvestmentDetailById(int id)
         {
-            return "value";
-        }
+            var investmentDetail = _investmentDataService.GetInvestmentDetailById(id);
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+            if (investmentDetail == null)
+            {
+                return BadRequest();
+            }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return investmentDetail;
         }
     }
 }

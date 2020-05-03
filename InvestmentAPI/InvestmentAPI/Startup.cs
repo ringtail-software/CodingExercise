@@ -1,4 +1,5 @@
 ﻿using InvestmentAPI.Contexts;
+using InvestmentAPI.Services.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,7 @@ namespace InvestmentAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddScoped<IInvestmentDataService, InvestmentDataService>();
             services.AddDbContext<InvestmentContext>(options => options.UseInMemoryDatabase(databaseName: "InvestmentDB"));
         }
 
