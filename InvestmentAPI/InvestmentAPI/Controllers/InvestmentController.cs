@@ -10,7 +10,7 @@ namespace InvestmentAPI.Controllers
     [ApiController]
     public class InvestmentController : ControllerBase
     {
-        private IInvestmentDataService _investmentDataService;
+        private readonly IInvestmentDataService _investmentDataService;
 
         public InvestmentController(IInvestmentDataService investmentDataService)
         {
@@ -31,7 +31,7 @@ namespace InvestmentAPI.Controllers
             return investments;
         }
 
-        // GET api/values/5
+        // GET api/investment/detail/investmentId
         [HttpGet("detail/{id}")]
         public ActionResult<InvestmentDetail> GetInvestmentDetailById(int id)
         {

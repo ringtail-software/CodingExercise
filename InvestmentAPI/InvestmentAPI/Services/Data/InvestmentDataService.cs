@@ -7,7 +7,7 @@ namespace InvestmentAPI.Services.Data
 {
     public class InvestmentDataService : IInvestmentDataService
     {
-        private InvestmentContext _context;
+        private readonly InvestmentContext _context;
 
         public InvestmentDataService(InvestmentContext context)
         {
@@ -16,7 +16,6 @@ namespace InvestmentAPI.Services.Data
 
         public List<Investment> GetInvestmentByUserId(int userId)
         {
-            var theId = userId;
             var investments = _context.Investments.Where(x => x.UserId == userId).ToList();
 
             return investments;
