@@ -1,0 +1,1 @@
+﻿I am approaching this api with Domain Driven Design (DDD) in mind.
