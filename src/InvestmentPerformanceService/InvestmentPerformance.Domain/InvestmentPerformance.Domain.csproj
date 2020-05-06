@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="AggregatesModel\" />
+    <Folder Include="SeedWork\" />
+    <Folder Include="AggregatesModel\InvestmentAggregate\" />
+  </ItemGroup>
 </Project>
