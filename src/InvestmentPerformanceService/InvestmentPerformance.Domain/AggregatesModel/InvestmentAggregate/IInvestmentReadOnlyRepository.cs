@@ -1,12 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using InvestmentPerformance.Domain.SeedWork;
 
 namespace InvestmentPerformance.Domain.AggregatesModel.InvestmentAggregate
 {
-    public interface IInvestmentReadOnlyRepository
+    /// <summary>
+    /// Interface/contract for InvestmentReadOnlyRepository
+    /// </summary>
+    public interface IInvestmentReadOnlyRepository : IRepository<Investment>
     {
-        Task<Investment> GetInvestmentAsync(int userId);
+        Task<IEnumerable<Investment>> GetAllInvestmentsAsync();
 
-        Task<InvestmentDetail> GetInvestmentDetailsAsync(int investmentId);
+        Task<IEnumerable<Investment>> GetUserInvestmentsAsync(int userId);
+
+        Task<Investment> GetInvestmentAsync(int investmentId);
     }
 }

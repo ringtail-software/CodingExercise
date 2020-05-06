@@ -11,6 +11,16 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <PackageReference Include="Moq" Version="4.14.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InvestmentPerformance.Domain\InvestmentPerformance.Domain.csproj" />
+    <ProjectReference Include="..\InvestmentPerformance.Infrastructure\InvestmentPerformance.Infrastructure.csproj" />
+    <ProjectReference Include="..\InvestmentPerformance.API\InvestmentPerformance.API.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MockData\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
 </Project>

@@ -12,7 +12,5 @@ namespace InvestmentPerformance.Infrastructure
         }
 
         public DbSet<Investment> Investments { get; set; }
-
-        public DbSet<InvestmentDetail> InvestmentDetails { get; set; }
     }
 }
