@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformance", "InvestmentPerformance.csproj", "{9D30355B-28F4-41E3-8638-8AC1A30846EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentPerformance.Api", "InvestmentPerformance.Api.csproj", "{9D30355B-28F4-41E3-8638-8AC1A30846EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentPerformance.Data", "..\InvestmentPerformance.Data\InvestmentPerformance.Data.csproj", "{5AFB0E3F-9433-4E09-A251-82A6BA32FD00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentPerformance.Tests", "..\InvestmentPerformance.Tests\InvestmentPerformance.Tests.csproj", "{17ABFE8B-5CB8-4EEB-88F4-9399CFC3095D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9D30355B-28F4-41E3-8638-8AC1A30846EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D30355B-28F4-41E3-8638-8AC1A30846EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D30355B-28F4-41E3-8638-8AC1A30846EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AFB0E3F-9433-4E09-A251-82A6BA32FD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFB0E3F-9433-4E09-A251-82A6BA32FD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFB0E3F-9433-4E09-A251-82A6BA32FD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFB0E3F-9433-4E09-A251-82A6BA32FD00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17ABFE8B-5CB8-4EEB-88F4-9399CFC3095D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17ABFE8B-5CB8-4EEB-88F4-9399CFC3095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17ABFE8B-5CB8-4EEB-88F4-9399CFC3095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17ABFE8B-5CB8-4EEB-88F4-9399CFC3095D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

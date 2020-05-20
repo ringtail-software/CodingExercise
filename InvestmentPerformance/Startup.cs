@@ -4,9 +4,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using InvestmentPerformance.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using InvestmentPerformance.BLL.Services;
 
-
-namespace InvestmentPerformance
+namespace InvestmentPerformance.Api
 {
     public class Startup
     {
@@ -24,8 +27,13 @@ namespace InvestmentPerformance
             services.AddHealthChecks();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Investment Performance API", Version = "v1" });
             });
+
+            var connection = Configuration.GetConnectionString("InvestmentDatabase");
+            services.AddDbContext<InvestmentDbContext>(options => options.UseSqlServer(connection));
+
+            services.AddTransient<IInvestmentService, InvestmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,22 +43,16 @@ namespace InvestmentPerformance
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseHealthChecks("/health");
-
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
