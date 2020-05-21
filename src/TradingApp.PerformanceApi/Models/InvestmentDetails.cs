@@ -1,6 +1,7 @@
 ﻿namespace TradingApp.PerformanceApi.Models
 {
     using System;
+    using TradingApp.PerformanceApi.Enums;
 
     /// <summary>
     /// The performance details for an investment.
@@ -25,9 +26,26 @@
         public decimal CurrentPrice { get; internal set; }
 
         /// <summary>
+        /// Gets the original purchase date.
+        /// </summary>
+        public DateTime PurchaseDate { get; internal set; }
+
+        /// <summary>
+        /// Gets the term.
+        /// This is how long the stock has been owned. <=1 year is short term, >1 year is long term.
+        /// </summary>
+        public Term Term => (DateTime.Now - this.PurchaseDate).TotalDays > 365 ? Term.Long : Term.Short;
+
+        /// <summary>
         /// Gets the current investment value.
         /// This is the number of shares multiplied by the current price per share.
         /// </summary>
         public decimal CurrentValue => this.Shares * this.CurrentPrice;
+
+        /// <summary>
+        /// Gets the total gain or loss.
+        /// This is the difference between the current value, and the amount paid for all shares when they were purchased.
+        /// </summary>
+        public decimal TotalGain => this.CurrentValue - (this.CostBasis * this.Shares);
     }
 }
