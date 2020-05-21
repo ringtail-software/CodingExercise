@@ -20,5 +20,12 @@
         /// <param name="userId">The user id.</param>
         /// <returns>A collection of investment summaries.</returns>
         IEnumerable<InvestmentSummary> GetInvestmentsByUserId(int userId);
+
+        /// <summary>
+        /// Get the performance details for an investment.
+        /// </summary>
+        /// <param name="id">The investment id.</param>
+        /// <returns>The performance details.</returns>
+        InvestmentDetails GetInvestmentDetails(int id);
     }
 }

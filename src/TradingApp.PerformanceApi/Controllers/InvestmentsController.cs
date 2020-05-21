@@ -35,9 +35,29 @@
         [HttpGet]
         public IEnumerable<InvestmentSummary> Get(int? userId = null)
         {
+            this.logger.LogInformation($"GET /investments - (userId: {userId})");
+
             return userId.HasValue
                 ? this.portfolio.GetInvestmentsByUserId(userId.Value)
                 : this.portfolio.GetInvestments();
+        }
+
+        /// <summary>
+        /// Get the performance details of an investment.
+        /// </summary>
+        /// <param name="id">The investment id.</param>
+        /// <returns>The investment details record.</returns>
+        [HttpGet]
+        public ActionResult<InvestmentDetails> Details(int id)
+        {
+            var details = this.portfolio.GetInvestmentDetails(id);
+
+            if (details == null)
+            {
+                return this.NotFound();
+            }
+
+            return details;
         }
     }
 }

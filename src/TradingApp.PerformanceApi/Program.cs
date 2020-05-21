@@ -1,3 +1,8 @@
+using System.Runtime.CompilerServices;
+
+// expose assembly internals to the testing project
+[assembly: InternalsVisibleTo("TradingApp.PerformanceApi.Tests")]
+
 namespace TradingApp.PerformanceApi
 {
     using Microsoft.AspNetCore.Hosting;
