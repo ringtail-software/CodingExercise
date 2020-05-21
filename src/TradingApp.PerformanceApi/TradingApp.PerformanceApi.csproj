@@ -17,4 +17,8 @@
   <ItemGroup>
     <None Include="..\..\.editorconfig" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
 </Project>
