@@ -13,6 +13,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Bogus" Version="29.0.2" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\.editorconfig" />
