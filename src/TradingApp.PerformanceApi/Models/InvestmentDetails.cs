@@ -17,13 +17,13 @@
         /// Gets the cost basis per share.
         /// This is the price of 1 share of stock at the time it was purchased.
         /// </summary>
-        public decimal CostBasis { get; internal set; }
+        public decimal CostBasisPerShare { get; internal set; }
 
         /// <summary>
         /// Gets the current price per share.
         /// This is the current price of 1 share of the stock.
         /// </summary>
-        public decimal CurrentPrice { get; internal set; }
+        public decimal CurrentPricePerShare { get; internal set; }
 
         /// <summary>
         /// Gets the original purchase date.
@@ -32,7 +32,7 @@
 
         /// <summary>
         /// Gets the term.
-        /// This is how long the stock has been owned. <=1 year is short term, >1 year is long term.
+        /// This is how long the stock has been owned. Less than or equal to 1 year is short term, greater than 1 year is long term.
         /// </summary>
         public Term Term => (DateTime.Now - this.PurchaseDate).TotalDays > 365 ? Term.Long : Term.Short;
 
@@ -40,12 +40,12 @@
         /// Gets the current investment value.
         /// This is the number of shares multiplied by the current price per share.
         /// </summary>
-        public decimal CurrentValue => this.Shares * this.CurrentPrice;
+        public decimal CurrentValue => this.Shares * this.CurrentPricePerShare;
 
         /// <summary>
         /// Gets the total gain or loss.
         /// This is the difference between the current value, and the amount paid for all shares when they were purchased.
         /// </summary>
-        public decimal TotalGain => this.CurrentValue - (this.CostBasis * this.Shares);
+        public decimal TotalGain => this.CurrentValue - (this.CostBasisPerShare * this.Shares);
     }
 }

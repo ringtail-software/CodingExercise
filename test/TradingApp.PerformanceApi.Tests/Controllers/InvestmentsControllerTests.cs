@@ -94,8 +94,8 @@
                 UserId = 2,
                 Name = "Foo",
                 Shares = 12,
-                CostBasis = 29.00m,
-                CurrentPrice = 75.84m,
+                CostBasisPerShare = 29.00m,
+                CurrentPricePerShare = 75.84m,
             };
 
             this.portfolio.Setup(m => m.GetInvestmentDetails(id)).Returns(expected);

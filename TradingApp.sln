@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingApp.Data", "src\TradingApp.Data\TradingApp.Data.csproj", "{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,9 +55,22 @@ Global
 		{641B1FED-3252-4823-8E4C-A9940E391A03}.Release|x64.Build.0 = Release|Any CPU
 		{641B1FED-3252-4823-8E4C-A9940E391A03}.Release|x86.ActiveCfg = Release|Any CPU
 		{641B1FED-3252-4823-8E4C-A9940E391A03}.Release|x86.Build.0 = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|x64.Build.0 = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|x64.ActiveCfg = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|x64.Build.0 = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB69CAB8-86B2-4E9F-ADB1-228F787E250F} = {2D63C30C-7EBF-41D5-BA06-346E9B925519}
 		{641B1FED-3252-4823-8E4C-A9940E391A03} = {0C6824F0-4C84-40BE-A69A-3FBA561D68F1}
+		{CC2D9FFD-0794-433E-9402-F82F4E9BCAA5} = {2D63C30C-7EBF-41D5-BA06-346E9B925519}
 	EndGlobalSection
 EndGlobal

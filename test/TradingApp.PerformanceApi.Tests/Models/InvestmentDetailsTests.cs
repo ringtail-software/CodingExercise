@@ -27,8 +27,8 @@
         /// <param name="expected">The expected term assignment.</param>
         [Theory]
         [InlineData(1000, Term.Long)]
-        [InlineData(364, Term.Short)]
-        [InlineData(365, Term.Long)]
+        [InlineData(363, Term.Short)]
+        [InlineData(366, Term.Long)]
         [InlineData(50, Term.Short)]
         public void ShouldDetermineTerm(int days, Term expected)
         {
@@ -50,7 +50,7 @@
         {
             var expected = shares * currentPrice;
 
-            this.sut.CurrentPrice = currentPrice;
+            this.sut.CurrentPricePerShare = currentPrice;
             this.sut.Shares = shares;
 
             Assert.Equal(expected, this.sut.CurrentValue);
@@ -71,8 +71,8 @@
             var expected = (shares * currentPrice) - (shares * costBasis);
 
             this.sut.Shares = shares;
-            this.sut.CostBasis = costBasis;
-            this.sut.CurrentPrice = currentPrice;
+            this.sut.CostBasisPerShare = costBasis;
+            this.sut.CurrentPricePerShare = currentPrice;
 
             Assert.Equal(expected, this.sut.TotalGain);
         }
