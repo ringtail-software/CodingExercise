@@ -60,7 +60,7 @@
         /// Get the performance details of an investment.
         /// </summary>
         /// <param name="id">The investment id.</param>
-        /// <returns>The investment details record.</returns>
+        /// <returns>The investment details record.</returns>d
         [HttpGet]
         [Route("[controller]/{id}")]
         public ActionResult<InvestmentDetails> Details(int id)

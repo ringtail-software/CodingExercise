@@ -2,10 +2,11 @@ namespace TradingApp.PerformanceApi
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using TradingApp.Data.Entities;
+    using TradingApp.Data;
     using TradingApp.Data.Repositories;
     using TradingApp.PerformanceApi.Services;
 
@@ -22,12 +23,17 @@ namespace TradingApp.PerformanceApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<TradingAppContext>(options =>
+            {
+                options.UseInMemoryDatabase(databaseName: "TradingApp");
+            });
+
             services.AddControllers();
 
             // IoC bindings
             services.AddScoped<IPortfolioService, PortfolioService>();
             services.AddScoped<IStockPriceService, RandomStockPriceService>();
-            services.AddScoped<IRepository<Investment>, InvestmentRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
