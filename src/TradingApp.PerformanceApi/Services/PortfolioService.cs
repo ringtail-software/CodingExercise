@@ -43,18 +43,20 @@
         }
 
         /// <inheritdoc />
-        public IEnumerable<InvestmentSummary> GetInvestments()
+        public ICollection<InvestmentSummary> GetInvestments()
         {
             return this.investmentRepository.GetAll()
-                .Select(this.MapSummary);
+                .Select(this.MapSummary)
+                .ToList();
         }
 
         /// <inheritdoc />
-        public IEnumerable<InvestmentSummary> GetInvestmentsByUserId(int userId)
+        public ICollection<InvestmentSummary> GetInvestmentsByUserId(int userId)
         {
             return this.investmentRepository.GetAll()
                 .Where(entity => entity.UserId == userId)
-                .Select(this.MapSummary);
+                .Select(this.MapSummary)
+                .ToList();
         }
 
         /// <summary>

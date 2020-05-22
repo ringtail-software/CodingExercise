@@ -1,5 +1,6 @@
 ﻿namespace TradingApp.PerformanceApi.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
@@ -35,11 +36,24 @@
         [Route("[controller]")]
         public IEnumerable<InvestmentSummary> Get(int? userId = null)
         {
-            this.logger.LogInformation($"GET /investments - (userId: {userId})");
+            var endpoint = userId.HasValue
+                ? $"/investments?userId={userId}"
+                : "/investments";
 
-            return userId.HasValue
-                ? this.portfolio.GetInvestmentsByUserId(userId.Value)
-                : this.portfolio.GetInvestments();
+            try
+            {
+                var results = userId.HasValue
+                    ? this.portfolio.GetInvestmentsByUserId(userId.Value)
+                    : this.portfolio.GetInvestments();
+
+                this.logger.LogInformation($"GET {endpoint} :: {results.Count} record(s) found");
+                return results;
+            }
+            catch (Exception ex)
+            {
+                this.logger.LogError($"GET {endpoint} :: {ex.Message}");
+                throw ex;
+            }
         }
 
         /// <summary>
@@ -55,9 +69,11 @@
 
             if (details == null)
             {
+                this.logger.LogWarning($"GET /investments/{id} :: investment record not found.");
                 return this.NotFound();
             }
 
+            this.logger.LogInformation($"GET /investments/{id} :: record found.");
             return details;
         }
     }
