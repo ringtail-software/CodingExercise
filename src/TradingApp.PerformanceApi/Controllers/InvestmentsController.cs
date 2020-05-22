@@ -10,7 +10,6 @@
     /// Logic for the investments resource endpoints.
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
     public class InvestmentsController : Controller
     {
         private readonly ILogger<InvestmentsController> logger;
@@ -33,6 +32,7 @@
         /// <param name="userId">(Optional) Filter investments by a specific user.</param>
         /// <returns>The matching investment records.</returns>
         [HttpGet]
+        [Route("[controller]")]
         public IEnumerable<InvestmentSummary> Get(int? userId = null)
         {
             this.logger.LogInformation($"GET /investments - (userId: {userId})");
@@ -48,6 +48,7 @@
         /// <param name="id">The investment id.</param>
         /// <returns>The investment details record.</returns>
         [HttpGet]
+        [Route("[controller]/{id}")]
         public ActionResult<InvestmentDetails> Details(int id)
         {
             var details = this.portfolio.GetInvestmentDetails(id);

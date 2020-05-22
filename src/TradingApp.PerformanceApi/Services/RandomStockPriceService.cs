@@ -10,7 +10,7 @@
         /// <inheritdoc />
         public decimal GetCurrentPrice(string name)
         {
-            return new Faker().Finance.Amount();
+            return new Faker().Finance.Amount(1, 500, 2);
         }
     }
 }
