@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformance", "InvestmentPerformance\InvestmentPerformance.csproj", "{BA4D5F7C-05A9-47F5-913C-78B4D35AA24B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentPerformance", "InvestmentPerformance\InvestmentPerformance.csproj", "{BA4D5F7C-05A9-47F5-913C-78B4D35AA24B}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "InvestmentDatabase", "InvestmentDatabase\InvestmentDatabase\InvestmentDatabase.sqlproj", "{FFE8503C-E287-4431-845C-8895D9245C89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentPerformanceTests", "InvestmentPerformanceTests\InvestmentPerformanceTests.csproj", "{444DDE1C-20CD-454A-85DC-C6E5782EA251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{FFE8503C-E287-4431-845C-8895D9245C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFE8503C-E287-4431-845C-8895D9245C89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FFE8503C-E287-4431-845C-8895D9245C89}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{444DDE1C-20CD-454A-85DC-C6E5782EA251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{444DDE1C-20CD-454A-85DC-C6E5782EA251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{444DDE1C-20CD-454A-85DC-C6E5782EA251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{444DDE1C-20CD-454A-85DC-C6E5782EA251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

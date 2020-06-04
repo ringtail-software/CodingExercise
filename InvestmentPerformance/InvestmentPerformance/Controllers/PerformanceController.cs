@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Composition;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using InvestmentPerformance.Models;
-using InvestmentPerformance.Services;
+﻿using InvestmentPerformance.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Controllers
 {
@@ -15,10 +12,12 @@ namespace InvestmentPerformance.Controllers
     public class PerformanceController : ControllerBase
     {
         private IInvestmentService _investmentService;
+        private ILogger<PerformanceController> _logger;
 
-        public PerformanceController(IInvestmentService investmentService)
+        public PerformanceController(IInvestmentService investmentService, ILogger<PerformanceController> logger)
         {
             _investmentService = investmentService;
+            _logger = logger;
         }
 
         /// <summary>

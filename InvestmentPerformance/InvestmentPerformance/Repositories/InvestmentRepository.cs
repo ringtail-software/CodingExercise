@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using InvestmentPerformance.Dtos;
-using InvestmentPerformance.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +7,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Repositories

@@ -9,3 +9,7 @@
 /InvestmentPerformance/InvestmentDatabase/InvestmentDatabase/bin/Debug
 /InvestmentPerformance/InvestmentDatabase/InvestmentDatabase/obj/Debug
 *.user
+/InvestmentPerformance/InvestmentPerformanceTests/bin/Debug/netcoreapp3.1
+/InvestmentPerformance/InvestmentPerformanceTests/obj
+*.jfm
+*.dbmdl
