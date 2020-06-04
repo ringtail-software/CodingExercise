@@ -13,13 +13,13 @@ using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Controller.Tests
 {
-    public class PerformanceControllerTest
+    public class PerformanceControllerTests
     {
         private Mock<ILogger<PerformanceController>> _mocklogger;
         private Mock<IInvestmentService> _mockInvestmentService;
         private PerformanceController _performanceController;
 
-        public PerformanceControllerTest() {
+        public PerformanceControllerTests() {
             _mocklogger =  new Mock<ILogger<PerformanceController>>();
             _mockInvestmentService = new Mock<IInvestmentService>();
             _performanceController = new PerformanceController(_mockInvestmentService.Object, _mocklogger.Object);

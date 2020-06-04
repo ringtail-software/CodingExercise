@@ -1,14 +1,10 @@
 ﻿using InvestmentPerformance.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Resource
 {
     public static class Calculator
     {
-
         public static TermType CalculateTerm(DateTime purchasedTimeStamp)
         {
             var yearDiff = DateTime.Now.Year - purchasedTimeStamp.Year;
