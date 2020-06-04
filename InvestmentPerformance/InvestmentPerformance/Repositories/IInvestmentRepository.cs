@@ -1,16 +1,13 @@
 ﻿using InvestmentPerformance.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Repositories
 {
     public interface IInvestmentRepository
     {
-        IEnumerable<InvestmentDto> GetInvestments(Guid userGuid);
-        InvestmentTransactionDto GetInvestmentDetails(Guid userGuid, string investmentName);
-
+        Task<List<InvestmentDto>> GetInvestments(Guid userGuid);
+        Task<InvestmentTransactionDto> GetInvestmentDetails(Guid userGuid, string investmentName);
     }
-
-
-
 }

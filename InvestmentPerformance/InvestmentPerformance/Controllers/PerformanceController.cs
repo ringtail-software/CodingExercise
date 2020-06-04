@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,20 +21,33 @@ namespace InvestmentPerformance.Controllers
             _investmentService = investmentService;
         }
 
-        [HttpGet("user/{userId}/investments/{investment}")]
-        public InvestmentDetails Get(Guid userGuid, string investment)
+        /// <summary>
+        /// if nothing returned, then return 404 for not found.
+        ///  otherwise return 200.
+        /// </summary>
+        /// <param name="userGuid"></param>
+        /// <param name="investment"></param>
+        /// <returns></returns>
+        [HttpGet("user/{userGuid}/investments/{investment}")]
+        public async Task<IActionResult> Get(Guid userGuid, string investment)
         {
-            //if null returned, then return 404 for not found. for the guid.
-            //otherwise return 200.
-            return _investmentService.GetInvestmentPerformanceDetails(userGuid, investment);
+            var details = await _investmentService.GetInvestmentPerformanceDetails(userGuid, investment);
+            if (details == null) return NotFound(null);
+            return Ok(details);
         }
-
-        [HttpGet("user/{userId}/investments")]
-        public IEnumerable<Investment> Get(Guid userGuid)
+        /// <summary>
+        ///  if nothing returned, then return 404 for not found.
+        ///  otherwise return 200.
+        /// </summary>
+        /// <param name="userGuid"></param>
+        /// <returns></returns>
+        [HttpGet("user/{userGuid}/investments")]
+        public async Task<IActionResult> Get(Guid userGuid)
         {
-            //if null returned, then return 404 for not found. for the guid.
-            //otherwise return 200.
-            return _investmentService.GetInvestmentList(userGuid);
+            var investmentList = await _investmentService.GetInvestmentList(userGuid);
+            if (!investmentList.Any())  return NotFound(null);
+
+            return Ok(investmentList); 
         }
           
     }

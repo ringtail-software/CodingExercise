@@ -7,11 +7,10 @@ namespace InvestmentPerformance.Dtos
 {
     public class InvestmentTransactionDto
     {
-        public int Id { get; set; }
-        public Guid UserGuid { get; set; }
+        public int TransactionId { get; set; }
         public int InvestmentId { get; set; }
-        public double PurchasedPrice { get; set; }
-        public DateTime PurchasedTimeStamp { get; set; }
+        public double PurchasePrice { get; set; }
+        public DateTime PurchaseTimeStamp { get; set; }
         public string Name { get; set; }
         public int Shares { get; set; }
     }

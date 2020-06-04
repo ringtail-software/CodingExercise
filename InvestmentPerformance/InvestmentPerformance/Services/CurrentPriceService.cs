@@ -14,7 +14,7 @@ namespace InvestmentPerformance.Services
         public double GetCurrentPrice(double price)
         {
             double randomPriceMovement = GetRandomNumber(-price, price);
-            return price + randomPriceMovement;
+            return Math.Round(price + randomPriceMovement,2);
         }
 
         /// <summary>

@@ -1,13 +1,14 @@
 ﻿using InvestmentPerformance.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Services
 {
     public interface IInvestmentService
     {
-        IEnumerable<Investment> GetInvestmentList(Guid userGuid);
-        InvestmentDetails GetInvestmentPerformanceDetails(Guid userGuid, string investmentName);
+        Task<IEnumerable<Investment>> GetInvestmentList(Guid userGuid);
+        Task<InvestmentDetails> GetInvestmentPerformanceDetails(Guid userGuid, string investmentName);
 
     }
 }
