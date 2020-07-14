@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE TABLE IF NOT EXISTS Account (
        AccountId INTEGER PRIMARY KEY
 );
@@ -24,3 +26,5 @@ CREATE TABLE IF NOT EXISTS Investment (
        FOREIGN KEY(InstrumentId) REFERENCES Instrument(InstrumentId),
        FOREIGN KEY(AccountId) REFERENCES Account(AccountId)
 );
+
+COMMIT;

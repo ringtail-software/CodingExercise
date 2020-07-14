@@ -1,4 +1,6 @@
 -- placeholder data for demonstration
+BEGIN;
+
 INSERT INTO Account (AccountId) VALUES (1), (2), (3);
 
 INSERT INTO Company (Symbol, Name) VALUES ('GOOG', 'Alphabet Inc.'),
@@ -34,3 +36,5 @@ INSERT INTO Instrument (CompanyId, Price, Timestamp) VALUES (5, 9080, '2020-07-0
 							    (5, 9560, '2020-07-10 07:16:16');
 
 INSERT INTO Investment (Quantity, InstrumentId, AccountId) VALUES (15, 22, 1), (8, 24, 1), (100, 7, 1);
+
+COMMIT;
