@@ -1,0 +1,54 @@
+description = 'A trading application'
+group = 'com.tvd.trading'
+version = theVersion
+
+// Verify the user has a Gradle version capable of the build.
+assert gradle.gradleVersion >= '6.1', 'This Build only works with Gradle Version 4.4 or above'
+
+apply plugin: 'scala'
+apply plugin: 'application'
+
+sourceCompatibility = jdkCompatibilityVersion
+targetCompatibility = jdkCompatibilityVersion
+
+mainClassName = "com.tvd.trading.WebServer"
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    scalaVersion     = '2.13.1'
+    akkaVersion      = '2.6.3'
+    akkaHttpVersion  = '10.1.11'
+    logbackVersion   = '1.2.3'
+    scalatestVersion = '3.1.1'
+    sslAkkaVersion   = '0.2.2'
+    configVersion    = '1.4.0'
+    junitVersion     = '4.12'
+}
+
+configurations {
+    compile
+}
+
+dependencies {
+    implementation group: 'org.scala-lang',         name: 'scala-library',                   version: scalaVersion
+    implementation group: 'com.typesafe.akka',      name: 'akka-actor_2.13',                 version: akkaVersion
+    implementation group: 'com.typesafe.akka',      name: 'akka-stream_2.13',                version: akkaVersion
+    implementation group: 'com.typesafe.akka',      name: 'akka-http_2.13',                  version: akkaHttpVersion
+    implementation group: 'com.typesafe.akka',      name: 'akka-serialization-jackson_2.13', version: akkaVersion
+
+    implementation group: 'com.typesafe',           name: 'ssl-config-akka_2.12',            version: sslAkkaVersion
+    implementation group: 'com.typesafe',           name: 'config',                          version: configVersion
+    implementation group: 'com.typesafe.akka',      name: 'akka-slf4j_2.13',                 version: akkaVersion
+    implementation group: 'ch.qos.logback',         name: 'logback-classic',                 version: logbackVersion
+
+    testImplementation group: 'org.scalamock',      name: 'scalamock_2.13',                  version: '4.4.0'
+    testImplementation group: 'org.scalatestplus',  name: 'junit-4-12_2.13',                 version: '3.1.1.0'
+    testImplementation group: 'org.scalatest',      name: 'scalatest_2.13',                  version: scalatestVersion
+    testImplementation group: 'com.typesafe.akka',  name: 'akka-testkit_2.13',               version: akkaVersion
+    testImplementation group: 'com.typesafe.akka',  name: 'akka-stream-testkit_2.13',        version: akkaVersion
+    testImplementation group: 'com.typesafe.akka',  name: 'akka-http-testkit_2.13',          version: akkaHttpVersion
+    testImplementation group: 'org.mockito',        name: 'mockito-all',                     version: '1.8.4'
+}

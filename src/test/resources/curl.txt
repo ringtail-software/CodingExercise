@@ -1,0 +1,9 @@
+Generate self-signed PKCS#12 SSL certificate
+--------------------------------------------
+keytool -genkeypair -keystore keystore.p12 -storetype PKCS12 -storepass MY_PASSWORD -keyalg RSA -keysize 2048 -validity 99999 -dname "CN=gwb_certificate, OU=tvd, O=anindu, L=Pittsburgh, ST=PA, C=SA"
+
+CURL commands
+-------------
+curl -k -X GET  https://localhost:8383/trading/ping
+curl -k -X POST https://localhost:8383/trading/investment?username=johnone
+curl -k -X POST https://localhost:8383/trading/investment/111
