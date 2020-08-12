@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "3kNdKioPEv7LQJ4xjoGzSoUx1S9T3N/gtUfsn8WgEiXSM07Zzzc66cym+FzgtiZkiizG0AhW5CQ/0XsTitExdQ==",
+  "success": true,
+  "projectFilePath": "/home/codespace/workspace/CodingExercise/CodingExercise.csproj",
+  "expectedPackageFiles": [
+    "/var/nuget/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "/var/nuget/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "/var/nuget/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore/3.1.7/microsoft.entityframeworkcore.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore.abstractions/3.1.7/microsoft.entityframeworkcore.abstractions.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore.analyzers/3.1.7/microsoft.entityframeworkcore.analyzers.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore.design/3.1.7/microsoft.entityframeworkcore.design.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore.inmemory/3.1.7/microsoft.entityframeworkcore.inmemory.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.entityframeworkcore.relational/3.1.7/microsoft.entityframeworkcore.relational.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.caching.abstractions/3.1.7/microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.caching.memory/3.1.7/microsoft.extensions.caching.memory.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.configuration/3.1.7/microsoft.extensions.configuration.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.configuration.abstractions/3.1.7/microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.configuration.binder/3.1.7/microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.dependencyinjection/3.1.7/microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.dependencyinjection.abstractions/3.1.7/microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.logging/3.1.7/microsoft.extensions.logging.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.logging.abstractions/3.1.7/microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.options/3.1.7/microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "/var/nuget/microsoft.extensions.primitives/3.1.7/microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "/var/nuget/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",
+    "/var/nuget/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "/var/nuget/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
