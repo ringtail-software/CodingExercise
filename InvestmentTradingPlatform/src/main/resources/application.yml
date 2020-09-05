@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: InvestmentTradingPlatformMark1
+    main:
+        #web-application-type: NONE
+        banner-mode: console
+    jpa:
+        hibernate:
+            ddl-auto: update
+    datasource:
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_investment_trading_platform
+        username: springuser
+        password: RNR9CnuN2g
+    profiles:
+        active: dev
+
+logging.level.mm4nn.InvestmentTradingPlatform.InvestmentTradingPlatformApplication: INFO
