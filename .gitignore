@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/InvestmentPerformanceDatabase/bin/
+/InvestmentPerformanceDatabase/obj/
+/InvestmentPerformanceDatabase/InvestmentPerformanceDatabase.sqlproj.user
+/InvestmentPerformanceDatabase/InvestmentPerformanceDatabase.dbmdl
+/InvestmentPerformanceDatabase/InvestmentPerformanceDatabase.jfm
