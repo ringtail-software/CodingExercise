@@ -26,24 +26,16 @@ namespace SampleApi.Controllers
         [Route("Investments/{userId}")]
         public IEnumerable<InvestmentHeader> GetInvestmentsByUser(int userId)
         {
-            // pseduo code: Identity/roles not implemented. Also it would be a custom attribute, possibly at controller level 
-            //if (!User.IsInRole("CanAccessInvestments"))
-            //{
-                //_logger.LogWarning($"Unauthorized access attempt");
-                //return Unauthorized();
-            //}
-            
-
-            //todo: temp
-            return null;
+            var service = new InvestmentService(new InvestmentDataAccess());
+            return service.GetInvestmentsByUser(userId);
         }
 
         [HttpGet]
-        [Route("InvestmentDetails/{investmentId")]
-        public Investment GetInvestment(int investmentId)
+        [Route("InvestmentDetails/{investmentId}")]
+        public InvestmentModel GetInvestment(int investmentId)
         {
-            //todo: temp
-            return null;
+            var service = new InvestmentService(new InvestmentDataAccess());
+            return service.GetInvestment(investmentId);
         }
         
     }

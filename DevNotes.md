@@ -18,7 +18,7 @@ Additional assumptions
 - using ints as Ids, but in a large system it would be guids
 - an investment object represents a single transaction of purchasing shares of stock
 - there would be an existing authentification system that we would tie into, likely confirming access to methods
-- 
+- additional assumptions documented in code
 
 ### Issues
 If this were an actual story, several things would need to be clarified. 
@@ -31,11 +31,11 @@ If this were an actual story, several things would need to be clarified.
 First thought: If this were a full feature implementation, what would be involved?
  - [x] Create new VS project
  - [x] Add Swagger
- - [ ] Create Investment Service / Model / Tests
-	 - [ ] Get investments by user
-	 - [ ] Get investment details (by investment id)
- - [ ] Create Investment Controller
- - [ ] Confirm working
+ - [x] Create Investment Service / Model / Tests
+	 - [x] Get investments by user
+	 - [x] Get investment details (by investment id)
+ - [x] Create Investment Controller
+ - [x] Confirm working
  - [ ] Confirm documentation
  - [ ] Add instructions on how to run to Readme.md
 
