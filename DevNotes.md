@@ -14,6 +14,18 @@ Starting assumptions
 - Assume authenticated user
 - Log to default logger
 
+Additional assumptions
+- using ints as Ids, but in a large system it would be guids
+- an investment object represents a single transaction of purchasing shares of stock
+- there would be an existing authentification system that we would tie into, likely confirming access to methods
+- 
+
+### Issues
+If this were an actual story, several things would need to be clarified. 
+- Terminology: An Investment appears to represent a transaction. But common nominclature might suggest an investment includes all transactions into an entity. Eg: buying stock in the same company at different times.
+- If that's the case, do we need to aggreigate it? 
+- What does the data look like that the API is grabbing?
+
 
 ### ToDo
 First thought: If this were a full feature implementation, what would be involved?
