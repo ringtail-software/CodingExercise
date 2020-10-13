@@ -2,3 +2,7 @@
 SampleApi/SampleApi/bin/
 SampleApi/SampleApi/obj/
 SampleApi/.vs/
+
+SampleApi/SampleApi_NUnitTestProject/bin/
+
+SampleApi/SampleApi_NUnitTestProject/obj/

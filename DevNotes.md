@@ -35,9 +35,10 @@ First thought: If this were a full feature implementation, what would be involve
 	 - [x] Get investments by user
 	 - [x] Get investment details (by investment id)
  - [x] Create Investment Controller
- - [x] Confirm working
- - [ ] Confirm documentation
- - [ ] Add instructions on how to run to Readme.md
+ - [x] Confirm app appears working
+ - [x] Confirm tests working
+ - [x] Confirm documentation
+ - [x] Add instructions on how to run to Readme.md
 
 
 ### Notes

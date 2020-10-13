@@ -29,8 +29,8 @@ namespace SampleApi.Investments
                 CurrentPricePerShare = stock.CurrentStockPrice,
                 CostBasisPerShare = transaction.CostPerShare,
                 Term = transaction.TransactionDate < DateTime.Today.AddYears(-1) 
-                    ? ShareTerm.LongTerm 
-                    : ShareTerm.ShortTerm
+                    ? ShareTerm.LongTerm.ToString() 
+                    : ShareTerm.ShortTerm.ToString()
             };
         }
 

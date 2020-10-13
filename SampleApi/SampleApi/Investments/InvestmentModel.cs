@@ -29,7 +29,7 @@ namespace SampleApi.Investments
         public double CurrentValue { get { return CurrentPricePerShare * SharesOwned; } }
 
         /// <summary> this is how long the stock has been owned.  <=1 year is short term, >1 year is long term </summary>
-        public ShareTerm Term { get; set; }
+        public string Term { get; set; }
 
         /// <summary> this is the difference between the current value, and the amount paid for all shares when they were purchased </summary>
         public double TotalGainLoss { get { return CurrentValue - (SharesOwned * CostBasisPerShare); } }
