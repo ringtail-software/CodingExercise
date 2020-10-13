@@ -17,8 +17,8 @@ Starting assumptions
 
 ### ToDo
 First thought: If this were a full feature implementation, what would be involved?
- - [ ] Create new VS project
- - [ ] Add Swagger
+ - [x] Create new VS project
+ - [x] Add Swagger
  - [ ] Create Investment Service / Model / Tests
 	 - [ ] Get investments by user
 	 - [ ] Get investment details (by investment id)
@@ -26,3 +26,8 @@ First thought: If this were a full feature implementation, what would be involve
  - [ ] Confirm working
  - [ ] Confirm documentation
  - [ ] Add instructions on how to run to Readme.md
+
+
+### Notes
+Swagger config: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1
+
