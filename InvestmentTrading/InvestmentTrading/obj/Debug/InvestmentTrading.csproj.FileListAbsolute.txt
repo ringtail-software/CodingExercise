@@ -1,0 +1,2 @@
+C:\Projects_VS2017\Nuix\InvestmentTrading\InvestmentTrading\obj\Debug\InvestmentTrading.csprojAssemblyReference.cache
+C:\Projects_VS2017\Nuix\InvestmentTrading\InvestmentTrading\obj\Debug\InvestmentTrading.csproj.CoreCompileInputs.cache

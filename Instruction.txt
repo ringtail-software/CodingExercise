@@ -1,0 +1,34 @@
+﻿This solution includes 3 projects: 
+BusinessObjects code libery: includes 5 classes, they are Investor, Stock,Investment, InvestmentDatabase(for database mock up), and API
+InvestmentPerformanceTest: Unit tests 
+InvestmentPerformanceWebAPI: there is a web service file which is called InvestmentPerformance.asmx
+and an integration testing web page which is called InvestmentPerformanceWebAPITest.aspx. 
+this web page allow you to enter the investor ID and/or investment ID to request the Investment List or Investment Details 
+
+the Unit tests created using NUnit.
+
+Assumptions: in the parent system, the backend has a MS SQL database 
+which may include 3 tables, they are:
+Investor table which at least have InvestorID, InvestorName fields. probably will also have other information related to the Investor.
+InvestorID will be the primary Key.
+Stock table which will have StockID, StockCode, StockName, StockCurrentPrice and so on.
+StockID will be the primary key or also can use the StockCode as the primary key.
+Investment table will have InvestmentID, InvestorID, StockID, PurchasedDateTime, NumberofShare, BaseCostPerShare and so on.
+InvestmentID will be the primary Key, InvestorID and StockID will be the foreign Key.
+
+there will be 2 stored procedures for this Web Service:
+GetInvestments: it will take InvestorID as Parameter and retrieve the investment list (ID, Name) for this investor.
+GetInvestmentByID: it will take InvestorID and InvestmentID as Parameters and retrieve the investment details (PurchasedDateTime, NumberofShare, BaseCostPerShare)
+
+this solution file was created using Visual Studio 2017 using C#.
+I put in fake data for investor ID=1 and inverstor ID= 2.
+Fake data for Investments: InvestmentID =1, InvestmentID=2 and InvestmentID=3
+Investor 1 has two investments (InvestmentID 1 and 2), Investor 2 has 1 investment which is 3
+
+the testing page will display the XML document or an error message 
+when you click Search button based on the investorID and/or investmentID entered.
+
+you can run it using VS 2017 or deploy it to your local IIS web server.
+the start page is InvestmentPerformanceTest.aspx
+
+
