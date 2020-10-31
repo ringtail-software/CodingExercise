@@ -3,3 +3,7 @@
 ################################################################################
 
 /TraderService/packages
+/TraderService/TraderService/Bin
+/TraderService/TraderServiceTests/bin/Debug
+/TraderService/TraderServiceTests/obj
+/Trader/Trader/obj
