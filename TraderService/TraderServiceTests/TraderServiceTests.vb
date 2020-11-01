@@ -20,7 +20,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     <TestMethod()> Public Sub TestShoudReturnValidResult()
 
         Dim traderService As New TraderService.TraderServiceClient
-        Assert.IsNotNull(traderService.GetCurrentPrice("A123"))
+        Assert.IsNotNull(traderService.GetCurrentPrice("54321"))
 
     End Sub
 

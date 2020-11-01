@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2a0ae933-b0fd-4c35-bb6b-2d0a003948be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:23379/TraderService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TraderService.xsd" MetadataType="Schema" ID="e4cf7e4b-7537-44f9-a5a1-58c216fd2781" SourceId="1" SourceUrl="http://localhost:23379/TraderService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TraderService1.xsd" MetadataType="Schema" ID="929598d5-d660-45a1-be1f-68a33db82ce6" SourceId="1" SourceUrl="http://localhost:23379/TraderService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TraderService2.xsd" MetadataType="Schema" ID="8e9fa1a4-2775-4dfa-926c-9ef219c029a2" SourceId="1" SourceUrl="http://localhost:23379/TraderService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TraderService.disco" MetadataType="Disco" ID="2ac13b2c-b953-4bca-8e1f-c664682ff146" SourceId="1" SourceUrl="http://localhost:23379/TraderService.svc?disco" />
+    <MetadataFile FileName="TraderService.wsdl" MetadataType="Wsdl" ID="bd567095-b14e-4b33-a37b-a8845caeb60d" SourceId="1" SourceUrl="http://localhost:23379/TraderService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

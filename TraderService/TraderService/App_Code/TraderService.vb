@@ -37,7 +37,7 @@ Public Class TraderService
         Dim currentValue As Decimal = Nothing
         Dim logInstance As String = Nothing
 
-        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetCurrrentValue")
+        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetCurrentValue")
         db.AddInParameter(dbCommand, "@userId", DbType.Int64, userId)
 
         Try
@@ -134,7 +134,7 @@ Public Class TraderService
     End Function
 
     Private Sub Logevent(ByVal message As String)
-
+        ' log exceptions and other info to database
     End Sub
 
 End Class
