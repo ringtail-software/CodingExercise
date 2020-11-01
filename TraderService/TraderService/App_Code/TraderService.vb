@@ -11,7 +11,7 @@ Public Class TraderService
     Public Sub New()
     End Sub
 
-    Public Function GetCostBasisPerShare(ByVal userId As Int64) As Decimal Implements ITraderService.GetCostBasisPerShare
+    Public Function GetCostBasisPerShare(ByVal userId As Long) As Decimal Implements ITraderService.GetCostBasisPerShare
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
         Dim costBasisPerShare As Decimal = Nothing
@@ -31,7 +31,7 @@ Public Class TraderService
 
     End Function
 
-    Public Function GetCurrentValue(ByVal userId As Int64) As Decimal Implements ITraderService.GetCurrentValue
+    Public Function GetCurrentValue(ByVal userId As Long) As Decimal Implements ITraderService.GetCurrentValue
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
         Dim currentValue As Decimal = Nothing
@@ -51,7 +51,7 @@ Public Class TraderService
 
     End Function
 
-    Public Function GetCurrentPrice(ByVal userId As Int64) As Decimal Implements ITraderService.GetCurrentPrice
+    Public Function GetCurrentPrice(ByVal userId As Long) As Decimal Implements ITraderService.GetCurrentPrice
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
         Dim currentPrice As Decimal = Nothing
@@ -71,13 +71,13 @@ Public Class TraderService
 
     End Function
 
-    Public Function GetInvestmentTerm(ByVal userId As Int64) As Int16 Implements ITraderService.GetInvestmentTerm
+    Public Function GetInvestmentTerm(ByVal userId As Long) As Short Implements ITraderService.GetInvestmentTerm
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
-        Dim investmentTerm As Int16 = Nothing
+        Dim investmentTerm As Long = Nothing
         Dim logInstance As String = Nothing
 
-        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetInvestmentTerk")
+        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetInvestmentTerm")
         db.AddInParameter(dbCommand, "@userId", DbType.Int64, userId)
 
         Try
@@ -91,7 +91,7 @@ Public Class TraderService
 
     End Function
 
-    Public Function GetGainLoss(ByVal userId As Int64) As Decimal Implements ITraderService.GetGainLoss
+    Public Function GetGainLoss(ByVal userId As Long) As Decimal Implements ITraderService.GetGainLoss
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
         Dim gainLoss As Decimal = Nothing
@@ -111,13 +111,13 @@ Public Class TraderService
 
     End Function
 
-    Private Function GetInvestmentList(ByVal userId As Int64) As DataSet Implements ITraderService.GetInvestmentList
+    Private Function GetInvestmentList(ByVal userId As Long) As DataSet Implements ITraderService.GetInvestmentList
         Dim factory As DatabaseProviderFactory = New DatabaseProviderFactory
         Dim db As Database = factory.Create("Investment")
         Dim ds As DataSet = Nothing
         Dim logInstance As String = Nothing
 
-        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetListInvestment")
+        Dim dbCommand As DbCommand = db.GetStoredProcCommand("dbo.GetListInvestments")
         db.AddInParameter(dbCommand, "@userId", DbType.Int64, userId)
 
         Try
