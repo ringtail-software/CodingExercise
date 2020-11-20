@@ -1,0 +1,10 @@
+﻿INSERT INTO InvestmentDetails VALUES(1, 'Amazon', 1000, 1, 3000, '10/10/2020', 1);
+INSERT INTO InvestmentDetails VALUES(2, 'Google', 100, 10, 300, '10/10/2020', 2);
+INSERT INTO InvestmentDetails VALUES(3, 'Apple', 100, 5, 200, '10/10/2017', 2);
+INSERT INTO InvestmentDetails VALUES(4, 'Microsoft', 500, 5, 1000, '10/10/2017', 3);
+INSERT INTO InvestmentDetails VALUES(5, 'Nuix', 1000, 1, 3000, '10/10/2017', 3);
+INSERT INTO InvestmentDetails VALUES(6, 'Tesla', 2000, 2, 4000, '10/10/2017', 4);
+INSERT INTO InvestmentDetails VALUES(7, 'Google', 1000, 1, 3000, '10/10/2020', 4);
+INSERT INTO InvestmentDetails VALUES(8, 'Amazon', 500, 7, 700, '10/10/2017', 4);
+INSERT INTO InvestmentDetails VALUES(9, 'Amazon', 900, 5, 2500, '10/10/2017', 5);
+INSERT INTO InvestmentDetails VALUES(10, 'Google', 1000, 1, 3000, '10/10/2020', 6);
