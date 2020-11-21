@@ -1,0 +1,76 @@
+﻿@model InvPerfWebApi.ViewModels.InvestmentDataViewModel
+
+
+<section id="investment-detail-page">
+    @if (Model != null)
+    {
+
+        <div class="table">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>List of user investments</h4>
+
+                    <div class="investment-header">
+                        <div class="row">
+                            <div class="col-sm-2 no-gutter-sm-left"><strong>User</strong></div>
+                            <div class="col-sm-2"><strong>Investment Id</strong></div>
+                            <div class="col-sm-2"><strong>Investment Name</strong></div>
+                        </div>
+                    </div>
+
+                    @foreach (var userInvestment in Model.UserInvestments)
+                    {
+                        <div class="investment-detail">
+                            <div class="row">
+                                <div class="col-sm-2">@userInvestment.userName</div>
+                                <div class="col-sm-2">@userInvestment.invId</div>
+                                <div class="col-sm-2">@userInvestment.invName</div>
+                            </div>
+                        </div>
+                    }
+                   </div>
+  
+            </div>
+                
+            <div class="row">
+                    <div class="col-md-12">
+                        <h4>List of user investment Details</h4>
+
+                        <div class="performance-header">
+                            <div class="row">
+                                <div class="col-sm-1"><strong>Investment Name</strong></div>
+                                <div class="col-sm-1"><strong>Number of Shares</strong></div>
+                                <div class="col-sm-1"><strong>Cost Bases Per Share</strong></div>
+                                <div class="col-sm-1"><strong>Current Value</strong></div>
+                                <div class="col-sm-1"><strong>Current Price</strong></div>
+                                <div class="col-sm-1"><strong>Term</strong></div>
+                                <div class="col-sm-1"><strong>Total Gain/Los</strong></div>
+                            </div>
+                        </div>
+
+                        @foreach (var userInvestmentDetail in Model.UserInvestmentDetails)
+                        {
+                            <div class="performance-detail">
+                                <div class="row">
+                                    <div class="col-sm-1">@userInvestmentDetail.invName</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.numShares</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.costBasisPerShare</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.currentValue</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.currentPrice</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.term</div>
+                                    <div class="col-sm-1">@userInvestmentDetail.totalGainLoss</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+    }
+    else
+    {
+        <br />
+        <div class="alert alert-danger">
+            No order found.
+        </div>
+    }
+</section>

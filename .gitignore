@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/InvPerfWebApi/.vs/InvPerfWebApi/v16
+/InvPerfWebApi/InvPerfWebApi/bin
+/InvPerfWebApi/InvPerfWebApi/obj/Debug
+/InvPerfWebApi/InvPerfWebApi.Tests/bin/Debug
+/InvPerfWebApi/InvPerfWebApi.Tests/obj

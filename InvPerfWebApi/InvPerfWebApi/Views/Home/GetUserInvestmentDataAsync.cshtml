@@ -1,0 +1,14 @@
+﻿@model InvPerfWebApi.ViewModels.InvestmentDataViewModel
+@{
+    if (Model == null)
+    {
+        ViewBag.Title = "Investment Data";
+    }
+    else
+    {
+        ViewBag.Title = string.Format("Investments for User2");
+    }
+}
+
+@Html.Partial("_UserInvestmentData", Model)
+
