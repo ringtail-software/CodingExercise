@@ -1,0 +1,17 @@
+API Instructions
+The following methods are available for the GET API calls:
+
+Gets a list of all the investments
+api/Investment
+ 
+Gets a list of all the investments for the specific userId
+api/Investment/{userId:int}
+
+Gets the investment details for the given investment Id
+api/Investment/GetInvestmentDetail/{investmentId:int}
+
+TESTS
+Tests were created to test the available API Calls.  Return values are checked for validity.
+
+DATA PROVIDERS
+The data that was created uses a DbContext based on the models needed for the data to be returned.  I didn't have SQL installed on my home system, so I just created faker data to be returned.  During my testing, I ended up changing one of the models which ended up causing a conflict in my database.  I had issues getting the database to update to the new model so I coded around this issue, but the APIs still return the requested data.
