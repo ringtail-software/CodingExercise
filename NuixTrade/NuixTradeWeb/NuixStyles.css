@@ -1,0 +1,28 @@
+﻿.dTable {
+    display: table;
+    width:30%;
+}
+.dTableRow {
+    display: table-row;
+}
+.dTableCell {
+    display: table-cell;
+    padding: 3px 10px;
+    border: 1px solid #999999;
+    text-align:right;
+}
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    margin: 20px;
+}
+.float-child {
+    float: left;
+    margin: 20px;
+}
+.errorMessage {
+    color:red;
+}
+#copyright-notice {
+    padding:75px;
+}

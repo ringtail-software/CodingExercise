@@ -1,0 +1,84 @@
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.dll.config
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.pdb
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csprojAssemblyReference.cache
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csproj.CoreCompileInputs.cache
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csproj.CopyComplete
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.pdb
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.pdb
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.dll.config
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.config
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.xml
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.Web.dll
+C:\Users\jclbrs\Documents\Visual Studio 2017\Projects\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.Web.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.config
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.dll.config
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTrade.Tests.pdb
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.Web.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Helpers.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Mvc.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Razor.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Optimization.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.pdb
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NuixTradeWeb.dll.config
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\NLog.Web.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Helpers.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Mvc.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Razor.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\System.Web.Optimization.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csprojAssemblyReference.cache
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csproj.CoreCompileInputs.cache
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.csproj.CopyComplete
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.dll
+D:\git\CodingExercise\NuixTrade\NuixTrade.Tests\obj\Debug\NuixTrade.Tests.pdb

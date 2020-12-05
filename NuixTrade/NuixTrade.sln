@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuixTrade.Tests", "NuixTrade.Tests\NuixTrade.Tests.csproj", "{A9CB1191-D873-4161-A6C3-420E4BA9FE22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuixTradeWeb", "NuixTradeWeb\NuixTradeWeb.csproj", "{4C9654BA-5F21-4089-AB43-5ED7912F21D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9CB1191-D873-4161-A6C3-420E4BA9FE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CB1191-D873-4161-A6C3-420E4BA9FE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CB1191-D873-4161-A6C3-420E4BA9FE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CB1191-D873-4161-A6C3-420E4BA9FE22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9654BA-5F21-4089-AB43-5ED7912F21D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9654BA-5F21-4089-AB43-5ED7912F21D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9654BA-5F21-4089-AB43-5ED7912F21D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9654BA-5F21-4089-AB43-5ED7912F21D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88970450-1E26-445B-9DB8-6868E484DBB1}
+	EndGlobalSection
+EndGlobal
