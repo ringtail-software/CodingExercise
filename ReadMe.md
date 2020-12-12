@@ -1,8 +1,8 @@
-##Coding Exercise
+## Coding Exercise
 **Name:** David Cyphert
 **Date:** 12/12/2020
 **Assignment: **[Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
-####How To Run The Web API
+#### How To Run The Web API
 1. Open the solution file under the InvestmentPerformance.WebApi directory.
 
 2. To run the Web API from your local machine, press the play button in the top toolbar. This will open your default browser to the Swagger UI page as well as a console window for logging purposes.
@@ -38,7 +38,7 @@
 | 5 |  4 | MSFT | 500  | 225.11  | 2020-04-24 00:00:00  |
 | 6 |  4 | AMZN  | 150  | 2099.11  | 2018-06-13 00:00:00  |
 
-####How To Run The Unit Tests
+#### How To Run The Unit Tests
 1. Right click on the **InvestmentPerformance.WebApi.Tests** project and then Run Tests.
 
 2. This will bring up the Test Explorer window where you can see the tests defined and if they passed/failed.
