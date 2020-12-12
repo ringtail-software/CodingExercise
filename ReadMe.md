@@ -3,7 +3,7 @@
 
 **Date:** 12/12/2020
 
-**Assignment: **[Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
+**Assignment:** [Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
 
 #### How To Run The Web API
 1. Open the solution file under the InvestmentPerformance.WebApi directory.
