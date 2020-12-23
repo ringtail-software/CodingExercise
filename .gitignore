@@ -1,0 +1,8 @@
+*.mdb
+*.csproj.user
+*.DotSettings.user
+*.sln.cache
+*.user
+*.cab
+*.orig
+.vs/
