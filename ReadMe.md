@@ -1,10 +1,18 @@
-# Coding Exercise
-> This repository holds coding exercises for candidates going through the hiring process.
+# Zach Albert's Coding Exercise 12/22/2020
 
-You should have been assigned one of the coding exercises in this list.  More details can be found in the specific md file for that assignment.
+Investment Performance Api
 
-Instructions: Fork this repository, do the assigned work, and submit a pull request for review.
+#Notes
+I tried to add a SQLite database to be able to had actual data in the system, but was unable to get it running.  You can see my effore in the InvestmentDal class and the WebApiConfig
+Written in Visual Studio with .Net Framework, AutoFac, and NUnit
 
-[Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
+#How To Run
+Open in visual studio and run with IIS Express
 
-[Online Ordering SQL](OnlineOrderingSQL.md#online-ordering)
+To query the UserInvestments update the URL to http://localhost:<port number>/api/Investment/RetrieveUserInvestments/1
+
+To query the UserInvestmentDetails update the URL to http://localhost:<port number>/api/Investment/RetrieveUserInvestmentDetails/1/1
+
+To Run UnitTests right click the project and select "Run Unit Tests"
+
+

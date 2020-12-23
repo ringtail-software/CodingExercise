@@ -18,11 +18,6 @@ namespace ZachAlbertCodingExercise.Domain
     {
         private InvestmentManager _manager;
 
-        //public InvestmentController()
-        //{
-
-        //}
-
         public InvestmentController(InvestmentManager manager)
         {
             _manager = manager;
@@ -33,7 +28,6 @@ namespace ZachAlbertCodingExercise.Domain
         [HttpGet]
         public async Task<List<UserInvestmentResponse>> RetrieveUserInvestments(int userId)
         {
-            //_manager = new InvestmentManager(new InvestmentDal(new InvestmentContext("")));
             var investments = await  _manager.GetUserInvestments(userId);
 
             if (investments == null)
@@ -53,6 +47,7 @@ namespace ZachAlbertCodingExercise.Domain
             return response;
         }
 
+        //  /api/Investment/RetrieveUserInvestmentDetails/
         [Route("RetrieveUserInvestmentDetails/{userId:int}/{investmentId:int}")]
         [HttpGet]
         public async Task<List<UserInvestmentResponse>> RetrieveUserInvestmentDetails(int userId, int investmentId)
@@ -80,7 +75,5 @@ namespace ZachAlbertCodingExercise.Domain
 
             return response;
         }
-
-        //RetrieveUserInvestmentDetails?id=1
     }
 }
