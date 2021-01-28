@@ -1,0 +1,25 @@
+Instructions for use.
+
+I have made it that api is preloaded with 5 investments. The investments are as follows.
+Id	Name
+1	PNC
+2	Google
+3	Microsoft
+4	Apple
+5	Peleton
+
+When the api is started up by default it should return the investment id as well as the name of each investment in a list. (For me the url is https://localhost:44310/investments)
+To query each of these investments to get the number of shares, cost basis per share, current value, current price, term, and total gain/loss, pass the investment id as a parameter
+ (i.e. https://localhost:44310/investments/1 ) will get you the information for the PNC investment.
+
+I have also written unit tests which can be run in the test explorer.
+
+I hope I have met or exceeded your expectations.
+
+Thank you for your time,
+
+Joe Piasente
+
+
+
+

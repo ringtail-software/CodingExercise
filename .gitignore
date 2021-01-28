@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/NuixApiTests/bin/Debug/netcoreapp3.1
+/NuixApiTests/obj
+/NuixApi/.vs/NuixApi
+/NuixApi/bin/Debug/netcoreapp3.1
+/NuixApi/obj
