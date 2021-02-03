@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuixApi", "NuixApi.csproj", "{D2AC0633-5180-478F-89FB-1A096D822E2C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuixApiTests", "..\..\NuixApiTests\NuixApiTests.csproj", "{2BC84DFF-8F66-425F-85A2-7DABDA5B36E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NuixApiTests", "..\NuixApiTests\NuixApiTests.csproj", "{443792A5-EC04-4316-8EE2-1059A0997E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D2AC0633-5180-478F-89FB-1A096D822E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2AC0633-5180-478F-89FB-1A096D822E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2AC0633-5180-478F-89FB-1A096D822E2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BC84DFF-8F66-425F-85A2-7DABDA5B36E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BC84DFF-8F66-425F-85A2-7DABDA5B36E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BC84DFF-8F66-425F-85A2-7DABDA5B36E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BC84DFF-8F66-425F-85A2-7DABDA5B36E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443792A5-EC04-4316-8EE2-1059A0997E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443792A5-EC04-4316-8EE2-1059A0997E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443792A5-EC04-4316-8EE2-1059A0997E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443792A5-EC04-4316-8EE2-1059A0997E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

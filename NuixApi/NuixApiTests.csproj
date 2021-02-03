@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NuixApi\NuixApi.csproj" />
+    <ProjectReference Include="..\CodingExercise\NuixApi\NuixApi.csproj" />
   </ItemGroup>
 
 </Project>
