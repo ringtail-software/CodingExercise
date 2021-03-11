@@ -1,0 +1,12 @@
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\bin\Debug\netcoreapp3.1\CodingExercise.DAL.deps.json
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\bin\Debug\netcoreapp3.1\CodingExercise.DAL.dll
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\bin\Debug\netcoreapp3.1\CodingExercise.DAL.pdb
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.csprojAssemblyReference.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.AssemblyInfoInputs.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.AssemblyInfo.cs
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.csproj.CoreCompileInputs.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.dll
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.pdb
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\bin\Debug\netcoreapp3.1\CodingExercise.Models.dll
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\bin\Debug\netcoreapp3.1\CodingExercise.Models.pdb
+H:\projects\Nuix\CodingExercise\CodingExercise.DAL\obj\Debug\netcoreapp3.1\CodingExercise.DAL.csproj.CopyComplete

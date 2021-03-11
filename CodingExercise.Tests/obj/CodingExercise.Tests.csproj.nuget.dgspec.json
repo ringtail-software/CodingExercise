@@ -1,0 +1,296 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Tests\\CodingExercise.Tests.csproj": {}
+  },
+  "projects": {
+    "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\CodingExercise.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\CodingExercise.BLL.csproj",
+        "projectName": "CodingExercise.BLL",
+        "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\CodingExercise.BLL.csproj",
+        "packagesPath": "C:\\Users\\Isaac.000\\.nuget\\packages\\",
+        "outputPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isaac.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj": {
+                "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj"
+              },
+              "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj": {
+                "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Routing.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj",
+        "projectName": "CodingExercise.DAL",
+        "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj",
+        "packagesPath": "C:\\Users\\Isaac.000\\.nuget\\packages\\",
+        "outputPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isaac.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj": {
+                "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.8, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj",
+        "projectName": "CodingExercise.Models",
+        "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\CodingExercise.Models.csproj",
+        "packagesPath": "C:\\Users\\Isaac.000\\.nuget\\packages\\",
+        "outputPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isaac.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Tests\\CodingExercise.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Tests\\CodingExercise.Tests.csproj",
+        "projectName": "CodingExercise.Tests",
+        "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Tests\\CodingExercise.Tests.csproj",
+        "packagesPath": "C:\\Users\\Isaac.000\\.nuget\\packages\\",
+        "outputPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isaac.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\CodingExercise.BLL.csproj": {
+                "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.BLL\\CodingExercise.BLL.csproj"
+              },
+              "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj": {
+                "projectPath": "H:\\projects\\Nuix\\CodingExercise\\CodingExercise.DAL\\CodingExercise.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
