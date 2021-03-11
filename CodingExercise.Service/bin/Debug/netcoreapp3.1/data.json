@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 1,
+    "Name": "First User",
+    "Investments": [
+      {
+        "Id": 1001,
+        "Name": "Investment A",
+        "PriceAtPurchase": 1.23,
+        "NumShares": 500,
+        "CurrentPrice": 4.56,
+        "PurchaseDate":  "2020-05-01"
+      },
+      {
+        "Id": 1002,
+        "Name": "Investment B",
+        "PriceAtPurchase": 7.89,
+        "NumShares": 725,
+        "CurrentPrice": 9.01,
+        "PurchaseDate": "2019-03-10"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Second User",
+    "Investments": [
+      {
+        "Id": 2001,
+        "Name": "Investment C",
+        "PriceAtPurchase": 9.51,
+        "NumShares": 800,
+        "CurrentPrice": 7.53,
+        "PurchaseDate": "2017-08-15"
+      },
+      {
+        "Id": 2002,
+        "Name": "Investment D",
+        "PriceAtPurchase": 1.59,
+        "NumShares": 345,
+        "CurrentPrice": 2.58,
+        "PurchaseDate": "2020-01-03"
+      },
+      {
+        "Id": 2003,
+        "Name": "Investment E",
+        "PriceAtPurchase": 4.60,
+        "NumShares": 500,
+        "CurrentPrice": 4.56,
+        "PurchaseDate": "2020-01-03"
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodingExercise.Service</name>
+    </assembly>
+    <members>
+        <member name="M:CodingExercise.Service.Controllers.InvestmentController.List(System.Int32)">
+            <summary>
+            Returns a list of current investments for the user.
+            </summary>
+            <remarks>
+            
+            Sample Request:
+            api/Investment/1
+            
+            </remarks>
+            <param name="userId">Id of the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodingExercise.Service.Controllers.InvestmentController.Details(System.Int32,System.Int32)">
+            <summary>
+            Returns details for a user's investment.
+            </summary>
+            <remarks>
+            Sample Request:
+            api/Investment/1/Details/1001
+            </remarks>
+            <param name="userId">Id of the user.</param>
+            <param name="investmentId">Id of the users investment</param>
+            <returns></returns>
+        </member>
+        <member name="T:CodingExercise.Service.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodingExercise.Service.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:CodingExercise.Service.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodingExercise.Service.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CodingExercise.Service.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

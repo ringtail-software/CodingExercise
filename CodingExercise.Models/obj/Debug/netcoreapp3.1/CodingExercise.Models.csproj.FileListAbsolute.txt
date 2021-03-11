@@ -1,0 +1,9 @@
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\bin\Debug\netcoreapp3.1\CodingExercise.Models.deps.json
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\bin\Debug\netcoreapp3.1\CodingExercise.Models.dll
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\bin\Debug\netcoreapp3.1\CodingExercise.Models.pdb
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.csprojAssemblyReference.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.AssemblyInfoInputs.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.AssemblyInfo.cs
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.csproj.CoreCompileInputs.cache
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.dll
+H:\projects\Nuix\CodingExercise\CodingExercise.Models\obj\Debug\netcoreapp3.1\CodingExercise.Models.pdb
