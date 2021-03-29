@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuixInvestments", "NuixInve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuixInvestments.MiddleWare", "NuixInvestments.Data\NuixInvestments.MiddleWare.csproj", "{6A051F78-7EF1-40DC-BB2D-4F541B946207}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuixInvestments.Tests", "NuixInvestments.Tests\NuixInvestments.Tests.csproj", "{B697A4E4-5FA4-431E-BD1B-3784EE087172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6A051F78-7EF1-40DC-BB2D-4F541B946207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A051F78-7EF1-40DC-BB2D-4F541B946207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A051F78-7EF1-40DC-BB2D-4F541B946207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B697A4E4-5FA4-431E-BD1B-3784EE087172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B697A4E4-5FA4-431E-BD1B-3784EE087172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B697A4E4-5FA4-431E-BD1B-3784EE087172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B697A4E4-5FA4-431E-BD1B-3784EE087172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

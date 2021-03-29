@@ -5,7 +5,7 @@ namespace NuixInvestments.MiddleWare.Data.Repo.Interfaces
 {
     public interface IUserRepo
     {
-        UserInvestment GetSingleInvestmentsByUser(int userId, int investmentId);
+        UserInvestment GetSingleInvestmentByUser(int userId, int investmentId);
 
         IEnumerable<UserInvestment> GetAllInvestmentsByUser(int userId);
     }

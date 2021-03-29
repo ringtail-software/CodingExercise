@@ -10,6 +10,7 @@ namespace NuixInvestments.MiddleWare.Data.POCO
         public string FullName { get; set; }
         public string Abbreviation { get; set; }
         public decimal CurrentPrice { get; set; }
-
+        public DateTime CreatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
     }
 }

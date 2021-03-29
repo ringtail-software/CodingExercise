@@ -21,7 +21,7 @@ namespace NuixInvestments.Data
 
         public UserInvestment GetSingleInvestmentForUser(int userId, int investmentId)
         {
-            var userInvestment = UserRepo.GetSingleInvestmentsByUser(userId, investmentId);
+            var userInvestment = UserRepo.GetSingleInvestmentByUser(userId, investmentId);
             return userInvestment;
         }
     }
