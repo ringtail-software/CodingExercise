@@ -1,20 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using NuixInvestments.Data;
+using NuixInvestments.MiddleWare.Data.Repo.Interfaces;
+using NuixInvestments.MiddleWare.Data.Repo.SQL;
+using NuixInvestments.MiddleWare.Data.Repo.Static;
 
 namespace NuixInvestments
 {
     public class Startup
     {
+        private const string USE_STATIC_DATABASE = "UseStaticDatabase";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +24,18 @@ namespace NuixInvestments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            bool useStaticDatabase = Configuration.GetValue<bool>(USE_STATIC_DATABASE);
+
+            if (useStaticDatabase)
+            {
+                _ = services.AddScoped<IUserRepo, StaticUserRepo>();
+            }
+            else
+            {
+                _ = services.AddScoped<IUserRepo, SQLUserRepo>();
+            }
+
+            services.AddScoped<IMiddleWare, Data.MiddleWare>();
             services.AddControllers();
         }
 
