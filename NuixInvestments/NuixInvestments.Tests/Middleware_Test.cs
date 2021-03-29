@@ -1,4 +1,6 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using NuixInvestments.Data;
 using NuixInvestments.MiddleWare.Data.POCO;
 using NuixInvestments.MiddleWare.Data.Repo.Interfaces;
@@ -75,13 +77,20 @@ namespace NuixInvestments.Tests
             return repo;
         }
 
+        public ILogger<Data.MiddleWare> CreateMockedLogger()
+        {
+            var mock = new Mock<ILogger<Data.MiddleWare>>();
+            var logger = mock.Object;
+            return logger;
+        }
+
         [TestMethod]
         public void GetAllUserInvestments_AccessDeletedUser_ReturnsNull()
         {
             const int NOACCESS_USERID = 4;
-
+            ILogger<Data.MiddleWare> logger = CreateMockedLogger();
             IUserRepo repo = CreateStandardTestRepo();
-            IMiddleWare middleWare = new Data.MiddleWare(repo);
+            IMiddleWare middleWare = new Data.MiddleWare(logger, repo);
             
             var returnValue = middleWare.GetAllInvestmentsForUser(NOACCESS_USERID);
             Assert.IsNull(returnValue);
@@ -92,8 +101,9 @@ namespace NuixInvestments.Tests
         {
             const int NOSTOCKS_USERID = 5;
 
+            var logger = CreateMockedLogger();
             IUserRepo repo = CreateStandardTestRepo();
-            IMiddleWare middleWare = new Data.MiddleWare(repo);
+            IMiddleWare middleWare = new Data.MiddleWare(logger, repo);
 
             var returnValue = middleWare.GetAllInvestmentsForUser(NOSTOCKS_USERID)?.ToList();
             Assert.IsNotNull(returnValue);
@@ -105,8 +115,11 @@ namespace NuixInvestments.Tests
         {
             const int IMRICH_USERID = 3;
 
+            var logger = CreateMockedLogger();
             IUserRepo repo = CreateStandardTestRepo();
-            var returnValue = repo.GetAllInvestmentsByUser(IMRICH_USERID)?.ToList();
+            IMiddleWare middleWare = new Data.MiddleWare(logger, repo);
+
+            var returnValue = middleWare.GetAllInvestmentsForUser(IMRICH_USERID)?.ToList();
             Assert.IsNotNull(returnValue);
 
             // there are 4 total stocks, but silver was dumped over a year ago so it should be 3

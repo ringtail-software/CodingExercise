@@ -24,7 +24,7 @@ namespace NuixInvestments.Controllers
         [HttpGet("user/{userid}")]
         public IEnumerable<UserInvestment> Get(int userId)
         {
-            Logger.LogDebug("Entered FinanceController.Get(int)");
+            Logger.LogDebug($"Entered FinanceController.Get(int).  UserId: {userId}");
 
             var returnData = MiddleWare.GetAllInvestmentsForUser(userId);
 
@@ -34,7 +34,7 @@ namespace NuixInvestments.Controllers
         [HttpGet("user/{userid}/stock/{investmentId}")]
         public UserInvestment Details(int userId, int investmentId)
         {
-            Logger.LogDebug("Entered FinanceController.Details(int, int)");
+            Logger.LogDebug($"Entered FinanceController.Details(int,int).  UserId: {userId}, InvestmentId: {investmentId}");
 
             var returnData = MiddleWare.GetSingleInvestmentForUser(userId, investmentId);
 

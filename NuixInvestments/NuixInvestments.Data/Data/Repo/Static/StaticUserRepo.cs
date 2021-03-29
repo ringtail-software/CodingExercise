@@ -84,8 +84,11 @@ namespace NuixInvestments.MiddleWare.Data.Repo.Static
             {
                 var investment = (from i in UserInvestments where i.UserId == user.Id 
                                    && i.CurrentShares > 0 && i.InvestmentId == investmentId select i).FirstOrDefault();
-                investment.User = user;
-                investment.Investment = (from n in Investments where n.Id == investment.InvestmentId select n).First();
+                if (investment != null)
+                {
+                    investment.User = user;
+                    investment.Investment = (from n in Investments where n.Id == investment.InvestmentId select n).First();
+                }
                 return investment;
             }
         }
