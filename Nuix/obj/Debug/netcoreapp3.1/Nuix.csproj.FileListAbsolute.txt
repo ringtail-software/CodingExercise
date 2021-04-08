@@ -1,0 +1,9 @@
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/bin/Debug/netcoreapp3.1/Nuix.deps.json
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/bin/Debug/netcoreapp3.1/Nuix.dll
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/bin/Debug/netcoreapp3.1/Nuix.pdb
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.csprojAssemblyReference.cache
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.AssemblyInfoInputs.cache
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.AssemblyInfo.cs
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.csproj.CoreCompileInputs.cache
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.dll
+/home/demouser/RiderProjects/Personal/CodingExercise/Nuix/obj/Debug/netcoreapp3.1/Nuix.pdb
