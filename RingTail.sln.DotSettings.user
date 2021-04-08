@@ -4,4 +4,8 @@
     &lt;TestId&gt;NUnit3x::6335F45E-491F-4E94-8A62-31768448F4A6::.NETCoreApp,Version=v3.1::UnitTests.WebApiTest.GetUserStocksTest&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::6335F45E-491F-4E94-8A62-31768448F4A6::.NETCoreApp,Version=v3.1::UnitTests.WebApiTest.GetUserStockDetailsTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+&lt;/SessionState&gt;</s:String>
+	
+	
+	
+	</wpf:ResourceDictionary>
