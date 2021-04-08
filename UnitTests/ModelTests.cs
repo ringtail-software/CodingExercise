@@ -1,11 +1,9 @@
 using System;
-using System.Linq;
 using NUnit.Framework;
 using RingTail;
-using RingTail.Controllers;
 
 namespace UnitTests {
-    public class Tests {
+    public class ModelTests {
         private Stock _stock;
 
         [SetUp]
