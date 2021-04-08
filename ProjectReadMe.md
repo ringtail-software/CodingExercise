@@ -30,4 +30,4 @@ This WebApi is developed to fetch investments for a user and further details on 
 - At the top of the "Welcome Page", there will be a menu item called "Current Investments"; this is where the user will be able to access the current investments for the default user.
 - Each investment within the "Current Investment Page" will be clickable.
 - Clicking the investment will open up the details for that particular investment. 
-  - Note: The details page will also have a button labeled "" that allows the user to view the raw api output.
+  - Note: The details page will also have a button labeled "View Raw Api Output" that allows the user to view the raw api output.
