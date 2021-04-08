@@ -7,7 +7,7 @@ Date: Fri Apr 9 2021
 
 ###Overview
 
-This WebApi is developed to fetch investments for a user and further details on that investment. WebApi calls are hosted outside of the WebApplication. There are four Projects within the solution.
+This WebApi is developed to fetch investments for a user and further details on that investment. WebApi calls are hosted outside of the WebApplication. There are four Projects within the solution.  The WebApi uses an ApiKey. The one being used in the project is "MUlA8CBLy1yfYqkHLgtfpVy7"
 
 
 - Nuix
