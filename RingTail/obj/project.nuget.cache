@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "pPWW0AXoSFLoTHf6qeBiXV6aQSPvaKjg8Oqy8sVg6x1SFeK9vE+3++E8dx9Q4O2BJHvGRy+UurRNWpSGrQz7RA==",
+  "success": true,
+  "projectFilePath": "/home/demouser/RiderProjects/Personal/CodingExercise/RingTail/RingTail.csproj",
+  "expectedPackageFiles": [
+    "/home/demouser/.nuget/packages/npgsql/6.0.0-preview2/npgsql.6.0.0-preview2.nupkg.sha512",
+    "/home/demouser/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,140 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.page-header {
+    font-size: large;
+    border-bottom: 2px solid #008040;
+    margin-bottom: 15px;
+}
+
+.d-button {
+    text-decoration: none;
+    background-color: #8fd19e;
+    color: #FEFEFE;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.d-button:hover {
+    text-decoration: none;
+    color: #FEFEFE;
+    background-color: #6b9d77;
+}
+
+.card {
+    -webkit-box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.35);
+    padding: 5px 0;
+    background-color: #fdfdfd;
+}
+
+.card-tag {
+    float: left;
+    margin: 0 10px;
+}
+
+.tag{
+    font-size: small;
+    border-radius: 4px;
+    background-color: #adb5bd;
+    padding : 3px;
+    color: white;
+}
+
+
+/*---------------------------------------------------------------*/
+/*--                  GridStuff            ----------------------*/
+/*---------------------------------------------------------------*/
+
+.grid-display {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-display_center {
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-display.card a {
+    text-decoration: none;
+    color: #232323;
+}
+
+.grid-display.card a:hover {
+    text-decoration: none;
+    color: slategray;
+}

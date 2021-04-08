@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "eHLhByIkSSFQmzOu1i0vJgjrDZBz1zE6AxExLwp86qryyRlVIa2Pmc6E7JYgRCaYDdjFFRrutpTso6K7qs0wwg==",
+  "success": true,
+  "projectFilePath": "/home/demouser/RiderProjects/Personal/CodingExercise/RingTailStocks/RingTailStocks.csproj",
+  "expectedPackageFiles": [
+    "/home/demouser/.nuget/packages/extjs/4.1.1/extjs.4.1.1.nupkg.sha512",
+    "/home/demouser/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/demouser/.nuget/packages/npgsql/6.0.0-preview2/npgsql.6.0.0-preview2.nupkg.sha512",
+    "/home/demouser/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

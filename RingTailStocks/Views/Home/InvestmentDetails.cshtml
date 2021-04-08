@@ -1,0 +1,52 @@
+﻿@model RingTail.Stock
+
+@{
+    ViewData["Title"] = "Investment Details";
+    var errorMessage = ViewData["ErrorMessage"];
+}
+
+<div class="grid-display">
+    @if (Model != null) {
+        <div class="card">
+            <div class="card-tag">#@Model.Id - @Model.NameReadable (@Model.Name) <span class="tag">@Model.InvestmentType</span></div>
+            <div class="card-body">
+                <div class="grid-display">
+                    <div>
+                        <div class="font-italic font-weight-bold">Initial Investment</div>
+                        <div>
+                            @Model.Shares @(Model.Shares == 1 ? "Share" : "Shares") <span class="font-italic">@@</span> @Model.CostBasis.ToString("C2")
+                        </div>
+                        <div>Total Investment : @Model.InitialValue.ToString("C2")</div>
+                    </div>
+                    <div>
+                        <div class="font-italic font-weight-bold">Current Value</div>
+                        <div>
+                            @Model.Shares @(Model.Shares == 1 ? "Share" : "Shares") <span class="font-italic">@@</span> @Model.Price.ToString("C2")
+                        </div>
+                        <div>Current Value : @Model.CurrentValue.ToString("C2")</div>
+                    </div>
+                    <div class="grid-full">
+                        <div class="font-italic font-weight-bold">Total Gain/Loss</div><span class="tag">@Model.Term</span>
+                        <div>@Model.TotalDelta.ToString("C2") since @Model.AcquiredDate.ToString("MM/dd/yyyy")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a class="d-button" href="@Url.Action("StockDetails", "Home", new {userId = "1", investmentId = Model.Id})">View Raw Api Output</a>
+        </div>
+    }
+    else {
+        if (errorMessage != null) {
+            <div>
+                <span style="color: indianred">Error : @errorMessage.ToString()</span>
+            </div>
+        }
+        else {
+            <div>
+                <span>Could not find details for User/Investment Combo</span>
+            </div>
+        }
+    }
+</div>

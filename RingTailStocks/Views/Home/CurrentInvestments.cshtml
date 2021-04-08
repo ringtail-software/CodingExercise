@@ -1,0 +1,35 @@
+﻿@model List<RingTail.Stock>
+
+@{
+    ViewData["Title"] = "Current Investments";
+    var errorMessage = ViewData["ErrorMessage"];
+}
+<div class="page-header">
+    User Investments
+</div>
+<div class="text-center">
+    @if (Model != null && Model.Any()) {
+        <div class="grid-display">
+            @foreach (var stock in Model) {
+                <div class="grid-display card grid-display_center">
+                    <a href="@Url.Action("InvestmentDetails", "Home", new {userId = "1", investmentId = stock.Id})">
+                        <div class="card-tag">#@stock.Id</div>
+                        <div>@stock.NameReadable (@stock.Name)</div>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+    else {
+        if (errorMessage != null) {
+            <div>
+                <span style="color: indianred">Error : @errorMessage.ToString()</span>
+            </div>
+        }
+        else {
+            <div>
+                <span>No Investments found for Current User</span>
+            </div>
+        }
+    }
+</div>
