@@ -1,0 +1,74 @@
+﻿@page
+@model NuixInvestment.Pages.DetailModel
+@{
+	ViewData["Title"] = Model.UserId;
+}
+
+<div class="text-center">
+	<h3>Positions</h3>
+</div>
+
+<div id="investmentdetail" v-cloak>
+	<table v-if="details.length" class="table table-bordered table-hover table-striped">
+		<tbody>
+			<tr style="cursor:pointer;text-align:center">
+				<th v-on:click="sort('Ticker')" width="10%">Symbol <span v-arrow="{sortKey: 'Ticker'}" /></th>
+				<th v-on:click="sort('PurchasedPrice')" width="20%" title="Cost basis per share - the price of 1 share of stock at the time it was purchased">
+					Cost <span v-arrow="{sortKey: 'PurchasedPrice'}" />
+				</th>
+				<th v-on:click="sort('Val')" width="20%" title="Current value - the number of shares multiplied by the current price per share">
+					Value <span v-arrow="{sortKey: 'Val'}" />
+				</th>
+				<th v-on:click="sort('CurrentPrice')" width="20%" title="Current price - the current price of 1 share of the stock">
+					Price <span v-arrow="{sortKey: 'CurrentPrice'}" />
+				</th>
+				<th v-on:click="sort('Term')" width="10%" title="<=1 year is short term, >1 year is long term">Term <span v-arrow="{sortKey: 'Term'}" /></th>
+				<th v-on:click="sort('NetGain')" title="the difference between the current value, and the amount paid for all shares when they were purchased">
+					Net Gain <span v-arrow="{sortKey: 'NetGain'}" />
+				</th>
+			</tr>
+
+			<tr v-for="d in limitBy(orderBy(details, sortKey, sortOrder), pageSize, pageSize * (page.currentPage - 1))">
+				<td>{{d.Ticker}}</td>
+				<td right>{{d.PurchasedPrice | currency('',2)}}</td>
+				<td right>{{d.Val | currency('',2)}}</td>
+				<td right>{{d.CurrentPrice | currency('',2)}}</td>
+				<td v-bind:style="{ color: d.Term == 'Long' ? 'blue' : 'brown' }">{{d.Term}}</td>
+				<td right v-bind:style="{ color: d.NetGain > 0 ? 'Green' : 'Red' }">{{d.NetGain | currency('',2)}}</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td>Total</td>
+				<td center>{{ details.length }}</td>
+				<td colspan="10" align="center" v-if="details.length && details.length > pageSize">
+					<div is="uib-pagination" :boundary-links="true" :total-items="details.length" v-model="page" :items-per-page="pageSize" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></div>
+				</td>
+				<td colspan="10" v-else></td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<p v-else><em>{{ message }}</em></p>
+</div>
+
+<environment include="Development">
+	<script src="~/vue/vue.2.5.17.js"></script>
+	<script src="~/vue/axios-0.15.3.min.js"></script>
+	<script src="~/vue/vue-router.min.js"></script>
+	<script src="~/vue/vuejs-uib-pagination.js"></script>
+	<script src="~/vue/vue2-filters.min.js"></script>
+	<script src="~/vue/moment-with-locales.js"></script>
+	<script src="~/vue/investmentDetail.js?v=1"></script>
+</environment>
+
+<environment exclude="Development">
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/vue-router"></script>
+	<script src="~/vue/vuejs-uib-pagination.js"></script>
+	<script src="~/vue/vue2-filters.min.js"></script>
+	<script src="~/vue/moment-with-locales.js"></script>
+	<script src="~/vue/investmentDetail.js?v=1"></script>
+</environment>

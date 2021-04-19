@@ -1,0 +1,82 @@
+[
+	{
+		"UserId": 714,
+		"InvestmentId": 472,
+		"Shares": 742,
+		"PurchasedPrice": 134.5600,
+		"CurrentPrice": 123.4500,
+		"PurchasedDate": "2002-03-17T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 944,
+		"Shares": 164,
+		"PurchasedPrice": 2134.5600,
+		"CurrentPrice": 63123.7800,
+		"PurchasedDate": "2003-09-04T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 9,
+		"Shares": 214,
+		"PurchasedPrice": 834.5600,
+		"CurrentPrice": 2423.4000,
+		"PurchasedDate": "2002-04-19T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 343,
+		"Shares": 32,
+		"PurchasedPrice": 194.5600,
+		"CurrentPrice": 245.4500,
+		"PurchasedDate": "2007-05-06T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 211,
+		"Shares": 433,
+		"PurchasedPrice": 134.5600,
+		"CurrentPrice": 893.4900,
+		"PurchasedDate": "2003-04-25T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 389,
+		"Shares": 524,
+		"PurchasedPrice": 34.5600,
+		"CurrentPrice": 323.4500,
+		"PurchasedDate": "2005-01-04T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 764,
+		"Shares": 66,
+		"PurchasedPrice": 434.5600,
+		"CurrentPrice": 1123.4500,
+		"PurchasedDate": "2009-12-09T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 791,
+		"Shares": 576,
+		"PurchasedPrice": 14.5600,
+		"CurrentPrice": 323.4500,
+		"PurchasedDate": "2007-05-08T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 504,
+		"Shares": 823,
+		"PurchasedPrice": 34.5600,
+		"CurrentPrice": 124.5500,
+		"PurchasedDate": "2006-10-09T00:00:00"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 483,
+		"Shares": 138,
+		"PurchasedPrice": 13.5600,
+		"CurrentPrice": 34.4500,
+		"PurchasedDate": "2021-04-17T12:51:02.057"
+	}
+]

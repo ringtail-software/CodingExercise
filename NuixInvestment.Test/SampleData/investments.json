@@ -1,0 +1,52 @@
+[
+	{
+		"UserId": 714,
+		"InvestmentId": 472,
+		"Ticker": "AAPL"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 944,
+		"Ticker": "BTC"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 9,
+		"Ticker": "ETH"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 343,
+		"Ticker": "MSFT"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 211,
+		"Ticker": "TSLA"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 389,
+		"Ticker": "FB"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 764,
+		"Ticker": "GOOG"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 791,
+		"Ticker": "NFLX"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 504,
+		"Ticker": "MRNA"
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 483,
+		"Ticker": "PFE"
+	}
+]

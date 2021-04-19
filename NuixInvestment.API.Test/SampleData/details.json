@@ -1,0 +1,102 @@
+[
+	{
+		"UserId": 714,
+		"InvestmentId": 472,
+		"Ticker": "AAPL",
+		"PurchasedPrice": 134.5600,
+		"Val": 91599.9000,
+		"CurrentPrice": 123.4500,
+		"Term": "Long",
+		"NetGain": -8243.6200
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 944,
+		"Ticker": "BTC",
+		"PurchasedPrice": 2134.5600,
+		"Val": 10352299.9200,
+		"CurrentPrice": 63123.7800,
+		"Term": "Long",
+		"NetGain": 10002232.0800
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 9,
+		"Ticker": "ETH",
+		"PurchasedPrice": 834.5600,
+		"Val": 518607.6000,
+		"CurrentPrice": 2423.4000,
+		"Term": "Long",
+		"NetGain": 340011.7600
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 343,
+		"Ticker": "MSFT",
+		"PurchasedPrice": 194.5600,
+		"Val": 7854.4000,
+		"CurrentPrice": 245.4500,
+		"Term": "Long",
+		"NetGain": 1628.4800
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 211,
+		"Ticker": "TSLA",
+		"PurchasedPrice": 134.5600,
+		"Val": 386881.1700,
+		"CurrentPrice": 893.4900,
+		"Term": "Long",
+		"NetGain": 328616.6900
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 389,
+		"Ticker": "FB",
+		"PurchasedPrice": 34.5600,
+		"Val": 169487.8000,
+		"CurrentPrice": 323.4500,
+		"Term": "Short",
+		"NetGain": 151378.3600
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 764,
+		"Ticker": "GOOG",
+		"PurchasedPrice": 434.5600,
+		"Val": 74147.7000,
+		"CurrentPrice": 1123.4500,
+		"Term": "Long",
+		"NetGain": 45466.7400
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 791,
+		"Ticker": "NFLX",
+		"PurchasedPrice": 14.5600,
+		"Val": 186307.2000,
+		"CurrentPrice": 323.4500,
+		"Term": "Long",
+		"NetGain": 177920.6400
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 504,
+		"Ticker": "MRNA",
+		"PurchasedPrice": 34.5600,
+		"Val": 102504.6500,
+		"CurrentPrice": 124.5500,
+		"Term": "Long",
+		"NetGain": 74061.7700
+	},
+	{
+		"UserId": 714,
+		"InvestmentId": 483,
+		"Ticker": "PFE",
+		"PurchasedPrice": 13.5600,
+		"Val": 4754.1000,
+		"CurrentPrice": 34.4500,
+		"Term": "Short",
+		"NetGain": 2882.8200
+	}
+]

@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = Model.UserId;
+}
+
+<div class="text-center">
+	<h3>Nuix Investment</h3>
+</div>
+
+<div id="nuixinvestment" v-cloak>
+	<table v-if="investments.length" class="table table-bordered table-striped">
+		<tbody>
+			<tr style="cursor:pointer;text-align:center">
+				<th v-on:click="sort('InvestmentId')" width="40%">Id <span v-arrow="{sortKey: 'InvestmentId'}" /></th>
+				<th v-on:click="sort('Ticker')">Name <span v-arrow="{sortKey: 'Ticker'}" /></th>
+			</tr>
+
+			<tr v-for="i in limitBy(orderBy(investments, sortKey, sortOrder), pageSize, pageSize * (page.currentPage - 1))">
+				<td v-on:click="getInvestmentDetail(@Model.UserId)">
+					{{i.InvestmentId}}
+				</td>
+				<td>
+					{{i.Ticker}}
+				</td>
+			</tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+				<td>Total</td>
+				<td center>{{ investments.length }}</td>
+			</tr>
+			<tr>
+				<td colspan="12" align="center" v-if="investments.length && investments.length > pageSize">
+					<div is="uib-pagination" :boundary-links="true" :total-items="investments.length" v-model="page" :items-per-page="pageSize" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></div>
+				</td>
+				<td v-else></td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<p v-else><em>{{ message }}</em></p>
+</div>
+
+<environment include="Development">
+	<script src="~/vue/vue.2.5.17.js"></script>
+	<script src="~/vue/axios-0.15.3.min.js"></script>
+	<script src="~/vue/vue-router.min.js"></script>
+	<script src="~/vue/vuejs-uib-pagination.js"></script>
+	<script src="~/vue/vue2-filters.min.js"></script>
+	<script src="~/vue/moment-with-locales.js"></script>
+	<script src="~/vue/nuixInvestment.js?v=2"></script>
+</environment>
+
+<environment exclude="Development">
+	<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/vue-router"></script>
+	<script src="~/vue/vuejs-uib-pagination.js"></script>
+	<script src="~/vue/vue2-filters.min.js"></script>
+	<script src="~/vue/moment-with-locales.js"></script>
+	<script src="~/vue/nuixInvestment.js?v=1"></script>
+</environment>
