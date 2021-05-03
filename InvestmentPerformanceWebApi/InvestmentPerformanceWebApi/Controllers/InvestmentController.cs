@@ -26,16 +26,16 @@ namespace InvestmentPerformanceWebApi.Controllers
             _dal = dal;
         }
 
-        [HttpGet]
-        public async Task<List<InvestmentSummary>> Get()
+        [HttpGet("{userId}")]
+        public async Task<List<InvestmentSummary>> Get(int userId)
         {
-            return await _dal.GetUserInvestmentSummaries(1);
+            return await _dal.GetUserInvestmentSummaries(userId);
         }
 
-        [HttpGet("{investmentId}")]
-        public async Task<InvestmentDetail> Get(int investmentId)
+        [HttpGet("{userId}/{investmentId}")]
+        public async Task<InvestmentDetail> Get(int userId, int investmentId)
         {
-            return await _investmentManager.GetInvestmentDetail(1, investmentId);
+            return await _investmentManager.GetInvestmentDetail(userId, investmentId);
         }
     }
 }
