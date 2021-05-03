@@ -33,9 +33,10 @@ namespace InvestmentPerformanceWebApi.Controllers
         }
 
         [HttpGet("{userId}/{investmentId}")]
-        public async Task<InvestmentDetail> Get(int userId, int investmentId)
+        public async Task<ActionResult<InvestmentDetail>> Get(int userId, int investmentId)
         {
-            return await _investmentManager.GetInvestmentDetail(userId, investmentId);
+            var result = await _investmentManager.GetInvestmentDetail(userId, investmentId);
+            return result == null ? (ActionResult<InvestmentDetail>) NotFound() : Ok(result);
         }
     }
 }
