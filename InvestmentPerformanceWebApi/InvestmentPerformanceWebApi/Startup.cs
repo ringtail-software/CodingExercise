@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using InvestmentPerformanceWebApi.Domain;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 
 namespace InvestmentPerformanceWebApi
@@ -56,7 +57,7 @@ namespace InvestmentPerformanceWebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Program> logger)
         {
             if (env.IsDevelopment())
             {
@@ -64,6 +65,14 @@ namespace InvestmentPerformanceWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InvestmentPerformanceWebApi v1"));
             }
+
+            app.UseExceptionHandler(c => c.Run(async context =>
+            {
+                var path = context.Features.Get<IExceptionHandlerPathFeature>();
+                Exception ex = path.Error;
+
+                logger.LogError(ex, "Application error");
+            }));
 
             app.UseHttpsRedirection();
 
