@@ -1,0 +1,28 @@
+[
+
+  {
+    "id": 1,
+    "name": "Tesla",
+    "number_of_shares": 5,
+    "cost_basis": 1.5,
+    "current_price": 2.0,
+    "purchase_date": "2021-01-01"
+  },
+  {
+    "id": 2,
+    "name": "Game Stop",
+    "number_of_shares": 500,
+    "cost_basis": 0.3,
+    "current_price": 10.0,
+    "purchase_date": "2015-03-01"
+  },
+  {
+    "id": 3,
+    "name": "Doge Coin",
+    "number_of_shares": 20,
+    "cost_basis": 92.73,
+    "current_price": 3.45,
+    "purchase_date": "2020-07-01"
+  }
+
+]
