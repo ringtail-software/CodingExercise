@@ -28,7 +28,7 @@ namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestmentLis
 
             return await _dbContext
                 .UserInvestments
-                .Where(ui => ui.UserId == currentUserId && ui.Active)
+                .Where(ui => ui.UserId == currentUserId && (ui.Active ?? false))
                 .Select(ui => new GetInvestmentsModel
                 {
                     Id = ui.InvestmentId,

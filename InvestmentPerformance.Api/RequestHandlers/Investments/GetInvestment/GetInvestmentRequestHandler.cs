@@ -1,4 +1,4 @@
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InvestmentPerformance.Api.Entities;
@@ -30,7 +30,7 @@ namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment
 
             var userInvestment = await _dbContext
                 .UserInvestments
-                .FirstOrDefaultAsync(ui => ui.UserId == currentUserId && ui.InvestmentId == request.InvestmentId && ui.Active, cancellationToken);
+                .FirstOrDefaultAsync(ui => ui.UserId == currentUserId && ui.InvestmentId == request.InvestmentId && (ui.Active ?? false), cancellationToken);
 
             if (userInvestment == null)
             {

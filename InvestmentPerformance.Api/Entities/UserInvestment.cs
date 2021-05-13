@@ -13,7 +13,7 @@ namespace InvestmentPerformance.Api.Entities
         public int InvestmentId { get; set; }
         public Investment Investment { get; set; }
 
-        public bool Active { get; set; }
+        public bool? Active { get; set; }
 
         private readonly List<Purchase> _purchases = new List<Purchase>();
         public IReadOnlyCollection<Purchase> Purchases => _purchases.AsReadOnly();
