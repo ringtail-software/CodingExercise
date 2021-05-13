@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "e2a65316-0280-4fec-b594-c3b6a5b1ed71",
+		"name": "Nuix PerformanceInvestment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Investment List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMDQ4OTU5NSwiZXhwIjoxNjIzMDgxNTk1LCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.oIPv_iYfAT39Yq1tYEQg4LD5E4fRVaxODiSvhehX7FjKhIJ58fqfc2Cu4_zI8OxrWk0uTsr3CBecusBKqMLefhhopxjRY4M4pEwUDhJodVUlIg3-h_6kWNWOemhcH2nYYtRJrsa9LPiaak7dItYXfJZT8Oevnm1qiSx0i2uQAm_LmOxQZBkqWwHGjSzMatTraTtcpU3f_ooRMTHEQ76ixNvKPnafeydHY2-KNQytbro4kloBFFV71M5CNjxaRmBGYTj_j9rNtzTBtUPcG2ZSMsVznA0x-RdqHImc0I5WU0IGrvLGIaZKBHGtrcuQFsmzW6Aq18pq-__xhWZ0tBNdxw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/investments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"investments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Investment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMDQ4OTU5NSwiZXhwIjoxNjIzMDgxNTk1LCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.oIPv_iYfAT39Yq1tYEQg4LD5E4fRVaxODiSvhehX7FjKhIJ58fqfc2Cu4_zI8OxrWk0uTsr3CBecusBKqMLefhhopxjRY4M4pEwUDhJodVUlIg3-h_6kWNWOemhcH2nYYtRJrsa9LPiaak7dItYXfJZT8Oevnm1qiSx0i2uQAm_LmOxQZBkqWwHGjSzMatTraTtcpU3f_ooRMTHEQ76ixNvKPnafeydHY2-KNQytbro4kloBFFV71M5CNjxaRmBGYTj_j9rNtzTBtUPcG2ZSMsVznA0x-RdqHImc0I5WU0IGrvLGIaZKBHGtrcuQFsmzW6Aq18pq-__xhWZ0tBNdxw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/investments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"investments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
