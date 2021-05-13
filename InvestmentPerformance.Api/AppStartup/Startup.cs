@@ -1,5 +1,5 @@
 using InvestmentPerformance.Api.Entities;
-using InvestmentPerformance.Api.StartupStuff.Extensions;
+using InvestmentPerformance.Api.AppStartup.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -9,7 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text.Json.Serialization;
 
@@ -17,8 +16,6 @@ namespace InvestmentPerformance.Api.AppStartup
 {
     public class Startup
     {
-        private const string ClientCorsPolicyName = "ClientCorsPolicy";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -44,18 +41,6 @@ namespace InvestmentPerformance.Api.AppStartup
                         NameClaimType = ClaimTypes.NameIdentifier,
                     };
                 });
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: ClientCorsPolicyName,
-                    builder =>
-                    {
-                        builder
-                            .WithOrigins("http://localhost:3000")
-                            .WithHeaders(new[] { HeaderNames.Authorization, HeaderNames.Accept, HeaderNames.ContentType })
-                            .WithMethods(new[] { "GET", "POST", "PUT", "OPTIONS" });
-                    });
-            });
 
             services.RegisterServices();
 
@@ -86,7 +71,7 @@ namespace InvestmentPerformance.Api.AppStartup
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseCors(ClientCorsPolicyName);
+            app.UseErrorLogging();
 
             app.UseEndpoints(endpoints =>
             {

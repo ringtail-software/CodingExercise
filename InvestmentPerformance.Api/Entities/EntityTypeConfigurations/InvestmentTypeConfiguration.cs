@@ -16,10 +16,10 @@ namespace InvestmentPerformance.Api.Entities.EntityTypeConfigurations
                 .HasPrecision(15, 2);
 
             builder.HasData(
-                new Investment { Id = 1, Name = "INVEST1", CurrentPrice = 35.35m, CreatedDate = DateTime.UtcNow, UpdatedDate = DateTime.UtcNow },
-                new Investment { Id = 2, Name = "INVEST2", CurrentPrice = 12.00m, CreatedDate = DateTime.UtcNow, UpdatedDate = DateTime.UtcNow },
-                new Investment { Id = 3, Name = "INVEST3", CurrentPrice = 23.5m, CreatedDate = DateTime.UtcNow, UpdatedDate = DateTime.UtcNow },
-                new Investment { Id = 4, Name = "INVEST4", CurrentPrice = 19.22m, CreatedDate = DateTime.UtcNow, UpdatedDate = DateTime.UtcNow });
+                new Investment { Id = 1, Name = "INVEST1", CurrentPrice = 35.35m, CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc), UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc) },
+                new Investment { Id = 2, Name = "INVEST2", CurrentPrice = 12.00m, CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc), UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc) },
+                new Investment { Id = 3, Name = "INVEST3", CurrentPrice = 23.5m, CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc), UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc) },
+                new Investment { Id = 4, Name = "INVEST4", CurrentPrice = 19.22m, CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc), UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc) });
         }
     }
 }

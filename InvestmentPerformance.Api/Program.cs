@@ -1,5 +1,8 @@
+using NLog.Web;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
+using InvestmentPerformance.Api.AppStartup;
 
 namespace InvestmentPerformance.Api
 {
@@ -12,9 +15,16 @@ namespace InvestmentPerformance.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+              .ConfigureWebHostDefaults(webBuilder =>
+              {
+                  webBuilder.UseStartup<Startup>();
+              })
+              .ConfigureLogging(logging =>
+              {
+                  logging.ClearProviders();
+                  logging.SetMinimumLevel(LogLevel.Information);
+                  logging.AddConsole();
+              })
+              .UseNLog();
     }
 }

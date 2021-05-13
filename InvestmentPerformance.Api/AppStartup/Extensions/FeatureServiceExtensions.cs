@@ -2,7 +2,7 @@
 using InvestmentPerformance.Api.Services;
 using InvestmentPerformance.Api.Services.Interfaces;
 
-namespace InvestmentPerformance.Api.Ioc
+namespace InvestmentPerformance.Api.AppStartup.Extensions
 {
     public static class FeatureServiceExtensions
     {

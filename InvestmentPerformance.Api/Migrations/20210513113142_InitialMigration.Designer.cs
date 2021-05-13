@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InvestmentPerformance.Api.Migrations
 {
     [DbContext(typeof(InvestmentPerformanceDbContext))]
-    [Migration("20210512223927_InitialMigration")]
+    [Migration("20210513113142_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,34 +51,34 @@ namespace InvestmentPerformance.Api.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(933),
+                            CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CurrentPrice = 35.35m,
                             Name = "INVEST1",
-                            UpdatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(1550)
+                            UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2031),
+                            CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CurrentPrice = 12.00m,
                             Name = "INVEST2",
-                            UpdatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2040)
+                            UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2048),
+                            CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CurrentPrice = 23.5m,
                             Name = "INVEST3",
-                            UpdatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2049)
+                            UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2050),
+                            CreatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             CurrentPrice = 19.22m,
                             Name = "INVEST4",
-                            UpdatedDate = new DateTime(2021, 5, 12, 22, 39, 26, 551, DateTimeKind.Utc).AddTicks(2051)
+                            UpdatedDate = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)
                         });
                 });
 
@@ -116,16 +116,16 @@ namespace InvestmentPerformance.Api.Migrations
                         {
                             Id = 1,
                             CostBasisPerShare = 30.42m,
-                            CreatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 25,
-                            UpdatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 1
                         },
                         new
                         {
                             Id = 2,
                             CostBasisPerShare = 33.22m,
-                            CreatedDate = new DateTime(2020, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2020, 5, 4, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 100,
                             UpdatedDate = new DateTime(2020, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserInvestmentId = 1
@@ -134,45 +134,45 @@ namespace InvestmentPerformance.Api.Migrations
                         {
                             Id = 3,
                             CostBasisPerShare = 19.23m,
-                            CreatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 35,
-                            UpdatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 2
                         },
                         new
                         {
                             Id = 4,
                             CostBasisPerShare = 12.75m,
-                            CreatedDate = new DateTime(2021, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 16, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 200,
-                            UpdatedDate = new DateTime(2021, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 16, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 2
                         },
                         new
                         {
                             Id = 5,
                             CostBasisPerShare = 30.2m,
-                            CreatedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 15,
-                            UpdatedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 4, 4, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 2
                         },
                         new
                         {
                             Id = 6,
                             CostBasisPerShare = 10.98m,
-                            CreatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 55,
-                            UpdatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 3
                         },
                         new
                         {
                             Id = 7,
                             CostBasisPerShare = 31.00m,
-                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             NumberOfShares = 45,
-                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserInvestmentId = 4
                         });
                 });
@@ -184,7 +184,7 @@ namespace InvestmentPerformance.Api.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Active")
+                    b.Property<bool?>("Active")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
@@ -216,63 +216,63 @@ namespace InvestmentPerformance.Api.Migrations
                         {
                             Id = 1,
                             Active = true,
-                            CreatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 1,
-                            UpdatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2020, 2, 13, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "sXybwQ7JaDJ88jxAkBpTRWepUF4wfKvi@clients"
                         },
                         new
                         {
                             Id = 2,
                             Active = true,
-                            CreatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 3,
-                            UpdatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 1, 8, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "sXybwQ7JaDJ88jxAkBpTRWepUF4wfKvi@clients"
                         },
                         new
                         {
                             Id = 3,
                             Active = false,
-                            CreatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 4,
-                            UpdatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "sXybwQ7JaDJ88jxAkBpTRWepUF4wfKvi@clients"
                         },
                         new
                         {
                             Id = 4,
                             Active = true,
-                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 1,
-                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "anotherUserId"
                         },
                         new
                         {
                             Id = 5,
                             Active = false,
-                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 2,
-                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "anotherUserId"
                         },
                         new
                         {
                             Id = 6,
                             Active = true,
-                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 1,
-                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "anotherUserId2"
                         },
                         new
                         {
                             Id = 7,
                             Active = true,
-                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             InvestmentId = 4,
-                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2021, 2, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             UserId = "anotherUserId2"
                         });
                 });
