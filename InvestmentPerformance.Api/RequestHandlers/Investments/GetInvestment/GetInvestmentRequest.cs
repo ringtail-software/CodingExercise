@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment.Models;
+using InvestmentPerformance.Api.Models;
 
 namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment
 {

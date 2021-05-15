@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment.Models
+namespace InvestmentPerformance.Api.Models
 {
     public class GetInvestmentPurchaseModel
     {

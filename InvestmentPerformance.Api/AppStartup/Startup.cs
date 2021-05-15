@@ -1,15 +1,12 @@
 using InvestmentPerformance.Api.Entities;
 using InvestmentPerformance.Api.AppStartup.Extensions;
 using MediatR;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
-using System.Security.Claims;
 using System.Text.Json.Serialization;
 
 namespace InvestmentPerformance.Api.AppStartup
@@ -28,19 +25,7 @@ namespace InvestmentPerformance.Api.AppStartup
             services.AddDbContext<InvestmentPerformanceDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("InvestmentPerformance")));
 
-            var domain = $"https://{Configuration["Auth0:Domain"]}/";
-            services
-                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.Authority = domain;
-                    options.Audience = Configuration["Auth0:Audience"];
-
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        NameClaimType = ClaimTypes.NameIdentifier,
-                    };
-                });
+            services.AddAuthorization(Configuration);
 
             services.RegisterServices();
 

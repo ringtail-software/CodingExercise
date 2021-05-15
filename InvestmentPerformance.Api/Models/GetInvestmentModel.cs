@@ -1,7 +1,7 @@
 ﻿using InvestmentPerformance.Api.Entities.Enums;
 using System.Collections.Generic;
 
-namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment.Models
+namespace InvestmentPerformance.Api.Models
 {
     public class GetInvestmentModel
     {
