@@ -73,3 +73,9 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+######################
+# Unit test logs #
+######################
+testlog.manifest
+.dtbcache.v2
+*.testlog

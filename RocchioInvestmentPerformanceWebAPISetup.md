@@ -1,7 +1,7 @@
 # Rocchio Investment Performance Web API Setup
 
 #### Setup and Run Instructions:
-This is a.NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant. For testing, a long-lived access token has been generated (see Step 3 below).
+This is a.NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant. For testing, two long-lived access tokens have been generated. One is for an admin user, and one for a non-admin user (see Step 3 below).
 
 ##### 1. Run Migrations and set up the data
  - Add a connectionstring to the ConnectionStrings.InvestmentPerformance setting in the appsettings.json file
@@ -11,9 +11,17 @@ This is a.NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant
 ##### 2. Build and run the InvestmentPerformance.Api project
 
 ##### 3. Test the API endpoints
- - The API will be running on port 5001. The two endpoints to test are
-    - https://localhost:5001/investments
-    - https://localhost:5001/investments/{investmentId}
- - **Using Postman:** The preferred method of testing is to use Postman. A Postman collection file has been included in the `\ApiTesting` directory. You can import that collection into  Postman to get the two requests to the API.
- - **Not Using Postman:** A test user has been generated in the Auth0 tenant for this API with a long-lived access token that would only be used for development testing purposes like this. Users are authorized using OAuth 2.0 using a generated JWT as a Bearer token. Add the following Bearer token in the Authorization request header:
-    `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMDQ4OTU5NSwiZXhwIjoxNjIzMDgxNTk1LCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.oIPv_iYfAT39Yq1tYEQg4LD5E4fRVaxODiSvhehX7FjKhIJ58fqfc2Cu4_zI8OxrWk0uTsr3CBecusBKqMLefhhopxjRY4M4pEwUDhJodVUlIg3-h_6kWNWOemhcH2nYYtRJrsa9LPiaak7dItYXfJZT8Oevnm1qiSx0i2uQAm_LmOxQZBkqWwHGjSzMatTraTtcpU3f_ooRMTHEQ76ixNvKPnafeydHY2-KNQytbro4kloBFFV71M5CNjxaRmBGYTj_j9rNtzTBtUPcG2ZSMsVznA0x-RdqHImc0I5WU0IGrvLGIaZKBHGtrcuQFsmzW6Aq18pq-__xhWZ0tBNdxw`
+- The API will be running on port 5001. There are four endpoints to test.
+- The two endpoints on the InvestmentsController will get the data for the authenticated requesting user.
+   - https://localhost:5001/investments
+   - https://localhost:5001/investments/{investmentId}
+- The two endpoints on the UsersController check that the requesting user has an "admin" role. These endpoints allow the user to query for other users' data.
+   - https://localhost:5001/users/{userId}/investments
+   - https://localhost:5001/users/{userId}/investments/{investmentId}
+- **Using Postman:** The preferred method of testing is to use Postman. A Postman collection file has been included in the `\ApiTesting` directory. You can import that collection into  Postman to get six requests to the API (2 for InvestmentsController, 2 for UsersController as Admin, 2 for UsersController as Non-Admin).
+- **Not Using Postman:** Two test users have been generated in the Auth0 tenant for this API with long-lived access tokens that would only be used for development testing purposes. Users are authorized using OAuth 2.0 using a generated JWT as a Bearer token. Add the following Bearer tokens in the Authorization request header. One token is valid for an Admin user in the system (can be used to request endpoints on the UsersController), and the other token is valid for a non-Admin user:
+   - _Admin User Token_
+   `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoiTFV3eVN3MkRHbnQ4VElqZnloSnE1YlFhbGVMT2g2U0tAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTI5MCwiZXhwIjoxNjIzNjgzMjkwLCJhenAiOiJMVXd5U3cyREdudDhUSWpmeWhKcTViUWFsZUxPaDZTSyIsInNjb3BlIjoiYWRtaW4iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJhZG1pbiJdfQ.QHV8leLImkw-msBpJh_VlBlLbtLdwRRYMlm15lukKH9voijL_dp6MORfP2ETuOBOi39gysDKzmh20fHcRslBbe0rmwNKL5sb0STgWSmywdkUX0do6cBLOMAuOpdqSV_A41icJ-e73XsAHuGSe4J9tplxZ0xkbRvZpMofZQAbkiTvFLhe1SxgOFIyLtef4bXiSeJI6Gg9dKZOjojVa0-LOoYoC8ixLCayMmsiDxCTyFimojkkRFaOyZy6uu4UtkSvnTg5j9bmcbCEeOGc4LWHvEaEl3AO4s7oslC3BYAPmIV-iFKrDmu5XC-dE2x3TuemzfABT8fryc9oex66uLNKtA`
+
+   - _Non-Admin User Token_
+   `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTM2MSwiZXhwIjoxNjIzNjgzMzYxLCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsInBlcm1pc3Npb25zIjpbXX0.CvZePr-YvmFHS_ttVsmZ_pFQ57rDUnwPJQA-iMxYZCWWjsnzqZ39_Zqku4t-cYLgeRUh6mbehV519j2Vs2RVUhafcM_-uufSfT7rnfGBNrbBMpwWU5GiD7y1C5K13AAsrO2gmubsfnv9mnsSe6_t4NU9qC0bs-nZqMzNLTSZpe1dWWAznPUCXZbd-j4y9ih-PeHg5MjOWXVeBUaT-TE23VTonf46p5bx_KoGUgl8t1L9bakMpiBBdu-lI86SgiqFUjENpqK3zDYibDJXSiEdXOQDCISrVPOCuvVT-cw8Nd8DsujiTgFmTtdLLXitvLDpn8v1V398cF7EKdTLWhg8Mw`
