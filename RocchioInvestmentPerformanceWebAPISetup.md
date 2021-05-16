@@ -1,7 +1,13 @@
 # Rocchio Investment Performance Web API Setup
 
+#### Database Entities
+This API assumes that a user can make purchases on an investment at multiple different times. There are three entities that represent the data.
+  1. _Investment_ - This represents an investment that a user can buy shares of at any give time. This holds the current price of the investment.
+  2. _UserInvestment_ - This links a user to an investment
+  3. _Purchase_ - This represents a purchase by a user of a certain amount of shares of an investment. This holds the cost basis per share at the time of the purchase and the number of shares.
+
 #### Setup and Run Instructions:
-This is a.NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant. For testing, two long-lived access tokens have been generated. One is for an admin user, and one for a non-admin user (see Step 3 below).
+This is a .NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant. For testing, two long-lived access tokens have been generated. One is for an admin user, and one for a non-admin user (see Step 3 below).
 
 ##### 1. Run Migrations and set up the data
  - Add a connectionstring to the ConnectionStrings.InvestmentPerformance setting in the appsettings.json file
@@ -19,7 +25,7 @@ This is a.NET Core 3.1 Web API. Authentication for this API uses an Auth0 tenant
    - https://localhost:5001/users/{userId}/investments
    - https://localhost:5001/users/{userId}/investments/{investmentId}
 - **Using Postman:** The preferred method of testing is to use Postman. A Postman collection file has been included in the `\ApiTesting` directory. You can import that collection into  Postman to get six requests to the API (2 for InvestmentsController, 2 for UsersController as Admin, 2 for UsersController as Non-Admin).
-- **Not Using Postman:** Two test users have been generated in the Auth0 tenant for this API with long-lived access tokens that would only be used for development testing purposes. Users are authorized using OAuth 2.0 using a generated JWT as a Bearer token. Add the following Bearer tokens in the Authorization request header. One token is valid for an Admin user in the system (can be used to request endpoints on the UsersController), and the other token is valid for a non-Admin user:
+- **Not Using Postman:** Two test users have been generated in the Auth0 tenant for this API with long-lived access tokens that would only be used for development testing purposes. Users are authorized using OAuth 2.0 using a generated JWT as a Bearer token. Add the following Bearer tokens in the Authorization request header. One token is valid for an Admin user in the system (can be used to request endpoints on the UsersController), and the other token is valid for a non-Admin user (expect a 403 when making requests to endpoints on the UsersController):
    - _Admin User Token_
    `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoiTFV3eVN3MkRHbnQ4VElqZnloSnE1YlFhbGVMT2g2U0tAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTI5MCwiZXhwIjoxNjIzNjgzMjkwLCJhenAiOiJMVXd5U3cyREdudDhUSWpmeWhKcTViUWFsZUxPaDZTSyIsInNjb3BlIjoiYWRtaW4iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJhZG1pbiJdfQ.QHV8leLImkw-msBpJh_VlBlLbtLdwRRYMlm15lukKH9voijL_dp6MORfP2ETuOBOi39gysDKzmh20fHcRslBbe0rmwNKL5sb0STgWSmywdkUX0do6cBLOMAuOpdqSV_A41icJ-e73XsAHuGSe4J9tplxZ0xkbRvZpMofZQAbkiTvFLhe1SxgOFIyLtef4bXiSeJI6Gg9dKZOjojVa0-LOoYoC8ixLCayMmsiDxCTyFimojkkRFaOyZy6uu4UtkSvnTg5j9bmcbCEeOGc4LWHvEaEl3AO4s7oslC3BYAPmIV-iFKrDmu5XC-dE2x3TuemzfABT8fryc9oex66uLNKtA`
 
