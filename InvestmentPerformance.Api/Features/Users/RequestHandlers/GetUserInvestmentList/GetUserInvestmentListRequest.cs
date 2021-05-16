@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using InvestmentPerformance.Api.Models;
 using System.Collections.Generic;
+using InvestmentPerformance.Api.Features.Shared.Models;
 
-namespace InvestmentPerformance.Api.RequestHandlers.Users.GetUserInvestmentList
+namespace InvestmentPerformance.Api.Features.Users.RequestHandlers.GetUserInvestmentList
 {
     public class GetUserInvestmentListRequest : IRequest<ActionResult<IEnumerable<GetInvestmentsListModel>>>
     {

@@ -1,8 +1,8 @@
 ﻿using InvestmentPerformance.Api.Entities;
-using InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment;
-using InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestmentList;
-using InvestmentPerformance.Api.Services;
-using InvestmentPerformance.Api.Services.Interfaces;
+using InvestmentPerformance.Api.Features.Investments.RequestHandlers.GetInvestment;
+using InvestmentPerformance.Api.Features.Investments.RequestHandlers.GetInvestmentList;
+using InvestmentPerformance.Api.Features.Shared.Services;
+using InvestmentPerformance.Api.Features.Shared.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;

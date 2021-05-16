@@ -1,12 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using InvestmentPerformance.Api.Models;
-using InvestmentPerformance.Api.Services.Interfaces;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using InvestmentPerformance.Api.Features.Shared.Models;
+using InvestmentPerformance.Api.Features.Shared.Services.Interfaces;
 
-namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestment
+namespace InvestmentPerformance.Api.Features.Investments.RequestHandlers.GetInvestment
 {
     public class GetInvestmentRequestHandler : IRequestHandler<GetInvestmentRequest, ActionResult<GetInvestmentModel>>
     {

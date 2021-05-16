@@ -1,5 +1,5 @@
 ﻿using InvestmentPerformance.Api.Entities;
-using InvestmentPerformance.Api.Services;
+using InvestmentPerformance.Api.Features.Shared.Services;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
-using InvestmentPerformance.Api.Services.Interfaces;
 using System;
 using System.Security.Claims;
+using InvestmentPerformance.Api.Features.Shared.Services.Interfaces;
 
-namespace InvestmentPerformance.Api.Services
+namespace InvestmentPerformance.Api.Features.Shared.Services
 {
     public class CurrentUserProvider : ICurrentUserProvider
     {

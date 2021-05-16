@@ -1,13 +1,13 @@
 ﻿using InvestmentPerformance.Api.Entities;
-using InvestmentPerformance.Api.Models;
-using InvestmentPerformance.Api.Services.Interfaces;
+using InvestmentPerformance.Api.Features.Shared.Models;
+using InvestmentPerformance.Api.Features.Shared.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace InvestmentPerformance.Api.Services
+namespace InvestmentPerformance.Api.Features.Shared.Services
 {
     public class InvestmentProvider : IInvestmentProvider
     {

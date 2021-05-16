@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using InvestmentPerformance.Api.Models;
+using InvestmentPerformance.Api.Features.Shared.Models;
 
-namespace InvestmentPerformance.Api.RequestHandlers.Users.GetUserInvestment
+namespace InvestmentPerformance.Api.Features.Users.RequestHandlers.GetUserInvestment
 {
     public class GetUserInvestmentRequest : IRequest<ActionResult<GetInvestmentModel>>
     {

@@ -1,13 +1,13 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using InvestmentPerformance.Api.RequestHandlers.Users.GetUserInvestmentList;
-using InvestmentPerformance.Api.RequestHandlers.Users.GetUserInvestment;
-using InvestmentPerformance.Api.Models;
 using System.Collections.Generic;
 using InvestmentPerformance.Api.Constants;
+using InvestmentPerformance.Api.Features.Shared.Models;
+using InvestmentPerformance.Api.Features.Users.RequestHandlers.GetUserInvestmentList;
+using InvestmentPerformance.Api.Features.Users.RequestHandlers.GetUserInvestment;
 
-namespace InvestmentPerformance.Api.Controllers
+namespace InvestmentPerformance.Api.Features.Users
 {
     [ApiController]
     [Route("users")]

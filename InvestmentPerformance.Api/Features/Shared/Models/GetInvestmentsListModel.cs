@@ -1,4 +1,4 @@
-﻿namespace InvestmentPerformance.Api.Models
+﻿namespace InvestmentPerformance.Api.Features.Shared.Models
 {
     public class GetInvestmentsListModel
     {

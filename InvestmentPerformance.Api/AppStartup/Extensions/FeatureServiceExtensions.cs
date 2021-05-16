@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using InvestmentPerformance.Api.Services;
-using InvestmentPerformance.Api.Services.Interfaces;
+using InvestmentPerformance.Api.Features.Shared.Services;
+using InvestmentPerformance.Api.Features.Shared.Services.Interfaces;
 
 namespace InvestmentPerformance.Api.AppStartup.Extensions
 {
