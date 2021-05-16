@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestmentList
 {
-    public class GetInvestmentListForUserRequest : IRequest<ActionResult<IEnumerable<GetInvestmentsListModel>>>
+    public class GetInvestmentListRequest : IRequest<ActionResult<IEnumerable<GetInvestmentsListModel>>>
     {
     }
 }

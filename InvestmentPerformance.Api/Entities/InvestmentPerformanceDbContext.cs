@@ -2,6 +2,8 @@
 using InvestmentPerformance.Api.Entities.EntityTypeConfigurations;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace InvestmentPerformance.Api.Entities
 {
@@ -25,11 +27,29 @@ namespace InvestmentPerformance.Api.Entities
 
         public override int SaveChanges()
         {
-            var entries = ChangeTracker
+            SetBaseEntityProperties();
+            return base.SaveChanges();
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            SetBaseEntityProperties();
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+        {
+            SetBaseEntityProperties();
+            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+        }
+
+        private void SetBaseEntityProperties()
+        {
+            var baseEntityEntries = ChangeTracker
                 .Entries()
                 .Where(e => e.Entity is BaseEntity && (e.State == EntityState.Added || e.State == EntityState.Modified));
 
-            foreach (var entry in entries)
+            foreach (var entry in baseEntityEntries)
             {
                 ((BaseEntity)entry.Entity).UpdatedDate = DateTime.UtcNow;
 
@@ -38,8 +58,6 @@ namespace InvestmentPerformance.Api.Entities
                     ((BaseEntity)entry.Entity).CreatedDate = DateTime.UtcNow;
                 }
             }
-
-            return base.SaveChanges();
         }
     }
 }

@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace InvestmentPerformance.Api.RequestHandlers.Investments.GetInvestmentList
 {
-    public class GetInvestmentListForUserRequestHandler : IRequestHandler<GetInvestmentListForUserRequest, ActionResult<IEnumerable<GetInvestmentsListModel>>>
+    public class GetInvestmentListRequestHandler : IRequestHandler<GetInvestmentListRequest, ActionResult<IEnumerable<GetInvestmentsListModel>>>
     {
         private readonly ICurrentUserProvider _currentUserProvider;
         private readonly IInvestmentProvider _investmentProvider;
 
-        public GetInvestmentListForUserRequestHandler(ICurrentUserProvider currentUserProvider, IInvestmentProvider investmentProvider)
+        public GetInvestmentListRequestHandler(ICurrentUserProvider currentUserProvider, IInvestmentProvider investmentProvider)
         {
             _currentUserProvider = currentUserProvider;
             _investmentProvider = investmentProvider;
         }
 
-        public async Task<ActionResult<IEnumerable<GetInvestmentsListModel>>> Handle(GetInvestmentListForUserRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult<IEnumerable<GetInvestmentsListModel>>> Handle(GetInvestmentListRequest request, CancellationToken cancellationToken)
         {
             var currentUserId = _currentUserProvider.GetCurrentUserId();
 

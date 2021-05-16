@@ -19,7 +19,7 @@ namespace InvestmentPerformance.Api.Controllers
 
         [HttpGet]
         public async System.Threading.Tasks.Task<ActionResult<IEnumerable<GetInvestmentsListModel>>> GetInvestments() =>
-            await _mediator.Send(new GetInvestmentListForUserRequest());
+            await _mediator.Send(new GetInvestmentListRequest());
 
         [HttpGet("{investmentId:int}")]
         public async System.Threading.Tasks.Task<ActionResult<GetInvestmentModel>> GetInvestment(int investmentId) =>

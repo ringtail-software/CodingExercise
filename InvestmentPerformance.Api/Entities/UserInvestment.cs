@@ -25,5 +25,12 @@ namespace InvestmentPerformance.Api.Entities
         public decimal TotalGain => CurrentValue - Purchases.Sum(p => p.NumberOfShares * p.CostBasisPerShare);
 
         public Term Term => DateTime.UtcNow.AddYears(-1) <= CreatedDate ? Term.Short : Term.Long;
+
+        public void AddPurchase(Purchase purchase)
+        {
+            if (purchase == null) return;
+
+            _purchases.Add(purchase);
+        }
     }
 }

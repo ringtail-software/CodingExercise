@@ -4,77 +4,88 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using InvestmentPerformance.Api.Entities;
 
 namespace InvestmentPerformance.Tests
 {
-    public class UserInvestmentUnitTests
+    public class UserInvestmentUnitTests : DbContextTestBase
     {
-        private const string User1Id = "user1";
-
         [Fact]
         public async Task TestUserInvestmentTotalShares()
         {
-            const int InvestmentId = 1;
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentTotalShares));
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var userInvestment = await dbContext
+                    .UserInvestments
+                    .Include(ui => ui.Investment)
+                    .Include(ui => ui.Purchases)
+                    .Where(ui => ui.UserId == UserId && ui.InvestmentId == InvestmentId).FirstAsync();
 
-            var userInvestment = await dbContext.UserInvestments.Where(ui => ui.UserId == User1Id && ui.InvestmentId == InvestmentId).FirstAsync();
-
-            dbContext.Dispose();
-
-            Assert.Equal(125, userInvestment.TotalShares);
+                Assert.Equal(125, userInvestment.TotalShares);
+            }
         }
 
         [Fact]
         public async Task TestUserInvestmentCurrentValue()
         {
-            const int InvestmentId = 1;
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentCurrentValue));
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var userInvestment = await dbContext
+                    .UserInvestments
+                    .Include(ui => ui.Investment)
+                    .Include(ui => ui.Purchases)
+                    .Where(ui => ui.UserId == UserId && ui.InvestmentId == InvestmentId).FirstAsync();
 
-            var userInvestment = await dbContext.UserInvestments.Where(ui => ui.UserId == User1Id && ui.InvestmentId == InvestmentId).FirstAsync();
-
-            dbContext.Dispose();
-
-            Assert.Equal(2562.5m, userInvestment.CurrentValue);
+                Assert.Equal(2562.5m, userInvestment.CurrentValue);
+            }
         }
 
         [Fact]
         public async Task TestUserInvestmentNegativeTotalGain()
         {
-            const int InvestmentId = 1;
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentNegativeTotalGain));
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var userInvestment = await dbContext
+                    .UserInvestments
+                    .Include(ui => ui.Investment)
+                    .Include(ui => ui.Purchases)
+                    .Where(ui => ui.UserId == UserId && ui.InvestmentId == InvestmentId).FirstAsync();
 
-            var userInvestment = await dbContext.UserInvestments.Where(ui => ui.UserId == User1Id && ui.InvestmentId == InvestmentId).FirstAsync();
-
-            dbContext.Dispose();
-
-            Assert.Equal(-200m, userInvestment.TotalGain);
+                Assert.Equal(-200m, userInvestment.TotalGain);
+            }
         }
 
         [Fact]
         public async Task TestUserInvestmentTotalGain()
         {
-            const int InvestmentId = 3;
-            
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentTotalGain));
+            const int InvestmentId = DatabaseSeeder.Investment3Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var userInvestment = await dbContext.UserInvestments.Where(ui => ui.UserId == User1Id && ui.InvestmentId == InvestmentId).FirstAsync();
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var userInvestment = await dbContext
+                    .UserInvestments
+                    .Include(ui => ui.Investment)
+                    .Include(ui => ui.Purchases)
+                    .Where(ui => ui.UserId == UserId && ui.InvestmentId == InvestmentId).FirstAsync();
 
-            dbContext.Dispose();
-
-            Assert.Equal(7122m, userInvestment.TotalGain);
+                Assert.Equal(7122m, userInvestment.TotalGain);
+            }
         }
 
         [Fact]
-        public async Task TestUserInvestmentLongTerm()
+        public void TestUserInvestmentLongTerm()
         {
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentLongTerm));
-
-            var userInvestment = await dbContext.UserInvestments.FirstAsync();
-
-            dbContext.Dispose();
+            var userInvestment = new UserInvestment();
 
             userInvestment.CreatedDate = DateTime.UtcNow.AddYears(-1);
             Assert.Equal(Term.Long, userInvestment.Term);
@@ -84,12 +95,9 @@ namespace InvestmentPerformance.Tests
         }
 
         [Fact]
-        public async Task TestUserInvestmentShortTerm()
+        public void TestUserInvestmentShortTerm()
         {
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestUserInvestmentShortTerm));
-
-            var userInvestment = await dbContext.UserInvestments.FirstAsync();
-            dbContext.Dispose();
+            var userInvestment = new UserInvestment();
 
             userInvestment.CreatedDate = DateTime.UtcNow.AddYears(-1).AddHours(1);
             Assert.Equal(Term.Short, userInvestment.Term);

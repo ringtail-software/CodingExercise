@@ -1,4 +1,5 @@
-﻿using InvestmentPerformance.Api.Services;
+﻿using InvestmentPerformance.Api.Entities;
+using InvestmentPerformance.Api.Services;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -6,83 +7,131 @@ using Xunit;
 
 namespace InvestmentPerformance.Tests
 {
-    public class InvestmentProviderUnitTests
+    public class InvestmentProviderUnitTests : DbContextTestBase
     {
-        private const string User1Id = "user1";
-
         [Fact]
         public async Task TestGetActiveUserInvestmentsCount()
         {
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestGetActiveUserInvestmentsCount));
-            var investmentProvider = new InvestmentProvider(dbContext);
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var investments = await investmentProvider.GetActiveUserInvestments(User1Id, CancellationToken.None);
-            
-            dbContext.Dispose();
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            { 
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var investments = await investmentProvider.GetActiveUserInvestments(UserId, CancellationToken.None);
 
-            Assert.Equal(2, investments.Count());
+                Assert.Equal(2, investments.Count());
+            }
         }
 
         [Fact]
         public async Task TestGetActiveUserInvestmentsInvestmentIds()
         {
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestGetActiveUserInvestmentsInvestmentIds));
-            var investmentProvider = new InvestmentProvider(dbContext);
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var investments = await investmentProvider.GetActiveUserInvestments(User1Id, CancellationToken.None);
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var investments = await investmentProvider.GetActiveUserInvestments(UserId, CancellationToken.None);
 
-            dbContext.Dispose();
+                var investmentIds = investments.Select(i => i.Id).ToArray();
 
-            var investmentIds = investments.Select(i => i.Id).ToArray();
-            var expected = new int[] { 1, 3 };
-
-            Assert.Equal(investmentIds, expected);
+                Assert.Contains(DatabaseSeeder.Investment1Id, investmentIds);
+                Assert.Contains(DatabaseSeeder.Investment3Id, investmentIds);
+            }
         }
 
         [Fact]
         public async Task TestGetUserInvestmentValid()
         {
-            const int InvestmentId = 1;
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestGetUserInvestmentValid));
-            var investmentProvider = new InvestmentProvider(dbContext);
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
 
-            var userInvestmentModel = await investmentProvider.GetUserInvestment(User1Id, InvestmentId, CancellationToken.None);
-
-            dbContext.Dispose();
-
-            Assert.NotNull(userInvestmentModel);
-            Assert.Equal(InvestmentId, userInvestmentModel.Id);
+                Assert.NotNull(userInvestmentModel);
+                Assert.Equal(InvestmentId, userInvestmentModel.Id);
+            }
         }
 
         [Fact]
         public async Task TestGetUserInvestmentNotActive()
         {
-            const int InvestmentId = 4;
+            const int InvestmentId = DatabaseSeeder.Investment4Id;
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestGetUserInvestmentNotActive));
-            var investmentProvider = new InvestmentProvider(dbContext);
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
 
-            var userInvestmentModel = await investmentProvider.GetUserInvestment(User1Id, InvestmentId, CancellationToken.None);
-
-            dbContext.Dispose();
-
-            Assert.Null(userInvestmentModel);
+                Assert.Null(userInvestmentModel);
+            }
         }
 
         [Fact]
         public async Task TestGetUserInvestmentNotExists()
         {
-            const int InvestmentId = 100;
+            const int InvestmentId = 100; // doesn't exist
+            const string UserId = DatabaseSeeder.User1Id;
 
-            var dbContext = DbContextMocker.GetInvestmentPerformanceDbContext(nameof(TestGetUserInvestmentNotExists));
-            var investmentProvider = new InvestmentProvider(dbContext);
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
 
-            var userInvestmentModel = await investmentProvider.GetUserInvestment(User1Id, InvestmentId, CancellationToken.None);
+                Assert.Null(userInvestmentModel);
+            }
+        }
 
-            dbContext.Dispose();
+        [Fact]
+        public async Task TestGetUserInvestmentNonExistentUser()
+        {
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = "nonExistentUserId";
 
-            Assert.Null(userInvestmentModel);
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
+
+                Assert.Null(userInvestmentModel);
+            }
+        }
+
+        [Fact]
+        public async Task TestGetUserInvestmentLoadsInvestment()
+        {
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
+
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
+
+                Assert.NotNull(userInvestmentModel);
+                Assert.Equal("TEST_INVEST1", userInvestmentModel.Name);
+            }
+        }
+
+        [Fact]
+        public async Task TestGetUserInvestmentLoadsPurchases()
+        {
+            const int InvestmentId = DatabaseSeeder.Investment1Id;
+            const string UserId = DatabaseSeeder.User1Id;
+
+            using (var dbContext = new InvestmentPerformanceDbContext(ContextOptions))
+            {
+                var investmentProvider = new InvestmentProvider(dbContext);
+                var userInvestmentModel = await investmentProvider.GetUserInvestment(UserId, InvestmentId, CancellationToken.None);
+
+                Assert.NotNull(userInvestmentModel);
+                Assert.Equal(2, userInvestmentModel.Purchases.Count());
+                Assert.Equal(125, userInvestmentModel.Purchases.Sum(p => p.NumberOfShares));
+            }
         }
     }
 }
