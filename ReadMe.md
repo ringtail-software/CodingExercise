@@ -8,3 +8,5 @@ Instructions: Fork this repository, do the assigned work, and submit a pull requ
 [Investment Performance Web API](InvestmentPerformanceWebAPI.md#investment-performance-web-api)
 
 [Online Ordering SQL](OnlineOrderingSQL.md#online-ordering)
+
+[Rocchio Investment Performance Web API Setup](RocchioInvestmentPerformanceWebAPISetup.md#rocchio-investment-performance-web-api-setup)

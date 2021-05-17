@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "8e6a39a7-9d29-40b5-b7fd-dfc0645458b8",
+		"name": "Nuix PerformanceInvestment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Investment List For Authenticated User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTM2MSwiZXhwIjoxNjIzNjgzMzYxLCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsInBlcm1pc3Npb25zIjpbXX0.CvZePr-YvmFHS_ttVsmZ_pFQ57rDUnwPJQA-iMxYZCWWjsnzqZ39_Zqku4t-cYLgeRUh6mbehV519j2Vs2RVUhafcM_-uufSfT7rnfGBNrbBMpwWU5GiD7y1C5K13AAsrO2gmubsfnv9mnsSe6_t4NU9qC0bs-nZqMzNLTSZpe1dWWAznPUCXZbd-j4y9ih-PeHg5MjOWXVeBUaT-TE23VTonf46p5bx_KoGUgl8t1L9bakMpiBBdu-lI86SgiqFUjENpqK3zDYibDJXSiEdXOQDCISrVPOCuvVT-cw8Nd8DsujiTgFmTtdLLXitvLDpn8v1V398cF7EKdTLWhg8Mw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/investments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"investments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Investment For Authenticated User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTM2MSwiZXhwIjoxNjIzNjgzMzYxLCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsInBlcm1pc3Npb25zIjpbXX0.CvZePr-YvmFHS_ttVsmZ_pFQ57rDUnwPJQA-iMxYZCWWjsnzqZ39_Zqku4t-cYLgeRUh6mbehV519j2Vs2RVUhafcM_-uufSfT7rnfGBNrbBMpwWU5GiD7y1C5K13AAsrO2gmubsfnv9mnsSe6_t4NU9qC0bs-nZqMzNLTSZpe1dWWAznPUCXZbd-j4y9ih-PeHg5MjOWXVeBUaT-TE23VTonf46p5bx_KoGUgl8t1L9bakMpiBBdu-lI86SgiqFUjENpqK3zDYibDJXSiEdXOQDCISrVPOCuvVT-cw8Nd8DsujiTgFmTtdLLXitvLDpn8v1V398cF7EKdTLWhg8Mw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/investments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"investments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Investment List (As Non-Admin)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTM2MSwiZXhwIjoxNjIzNjgzMzYxLCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsInBlcm1pc3Npb25zIjpbXX0.CvZePr-YvmFHS_ttVsmZ_pFQ57rDUnwPJQA-iMxYZCWWjsnzqZ39_Zqku4t-cYLgeRUh6mbehV519j2Vs2RVUhafcM_-uufSfT7rnfGBNrbBMpwWU5GiD7y1C5K13AAsrO2gmubsfnv9mnsSe6_t4NU9qC0bs-nZqMzNLTSZpe1dWWAznPUCXZbd-j4y9ih-PeHg5MjOWXVeBUaT-TE23VTonf46p5bx_KoGUgl8t1L9bakMpiBBdu-lI86SgiqFUjENpqK3zDYibDJXSiEdXOQDCISrVPOCuvVT-cw8Nd8DsujiTgFmTtdLLXitvLDpn8v1V398cF7EKdTLWhg8Mw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://localhost:5001/users/anotherUserId/investments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"anotherUserId",
+						"investments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Investment (As Non-Admin)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoic1h5YndRN0phREo4OGp4QWtCcFRSV2VwVUY0d2ZLdmlAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTM2MSwiZXhwIjoxNjIzNjgzMzYxLCJhenAiOiJzWHlid1E3SmFESjg4anhBa0JwVFJXZXBVRjR3Zkt2aSIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyIsInBlcm1pc3Npb25zIjpbXX0.CvZePr-YvmFHS_ttVsmZ_pFQ57rDUnwPJQA-iMxYZCWWjsnzqZ39_Zqku4t-cYLgeRUh6mbehV519j2Vs2RVUhafcM_-uufSfT7rnfGBNrbBMpwWU5GiD7y1C5K13AAsrO2gmubsfnv9mnsSe6_t4NU9qC0bs-nZqMzNLTSZpe1dWWAznPUCXZbd-j4y9ih-PeHg5MjOWXVeBUaT-TE23VTonf46p5bx_KoGUgl8t1L9bakMpiBBdu-lI86SgiqFUjENpqK3zDYibDJXSiEdXOQDCISrVPOCuvVT-cw8Nd8DsujiTgFmTtdLLXitvLDpn8v1V398cF7EKdTLWhg8Mw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/users/anotherUserId/investments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"anotherUserId",
+						"investments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Investment List (As Admin)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoiTFV3eVN3MkRHbnQ4VElqZnloSnE1YlFhbGVMT2g2U0tAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTI5MCwiZXhwIjoxNjIzNjgzMjkwLCJhenAiOiJMVXd5U3cyREdudDhUSWpmeWhKcTViUWFsZUxPaDZTSyIsInNjb3BlIjoiYWRtaW4iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJhZG1pbiJdfQ.QHV8leLImkw-msBpJh_VlBlLbtLdwRRYMlm15lukKH9voijL_dp6MORfP2ETuOBOi39gysDKzmh20fHcRslBbe0rmwNKL5sb0STgWSmywdkUX0do6cBLOMAuOpdqSV_A41icJ-e73XsAHuGSe4J9tplxZ0xkbRvZpMofZQAbkiTvFLhe1SxgOFIyLtef4bXiSeJI6Gg9dKZOjojVa0-LOoYoC8ixLCayMmsiDxCTyFimojkkRFaOyZy6uu4UtkSvnTg5j9bmcbCEeOGc4LWHvEaEl3AO4s7oslC3BYAPmIV-iFKrDmu5XC-dE2x3TuemzfABT8fryc9oex66uLNKtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/users/anotherUserId/investments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"anotherUserId",
+						"investments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Investment (As Admin)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IndkZk9nZ3J6T3BaZkJCN1hMRzNScCJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOHR0NC0yNC51cy5hdXRoMC5jb20vIiwic3ViIjoiTFV3eVN3MkRHbnQ4VElqZnloSnE1YlFhbGVMT2g2U0tAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9udWl4L2FwaSIsImlhdCI6MTYyMTA5MTI5MCwiZXhwIjoxNjIzNjgzMjkwLCJhenAiOiJMVXd5U3cyREdudDhUSWpmeWhKcTViUWFsZUxPaDZTSyIsInNjb3BlIjoiYWRtaW4iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJhZG1pbiJdfQ.QHV8leLImkw-msBpJh_VlBlLbtLdwRRYMlm15lukKH9voijL_dp6MORfP2ETuOBOi39gysDKzmh20fHcRslBbe0rmwNKL5sb0STgWSmywdkUX0do6cBLOMAuOpdqSV_A41icJ-e73XsAHuGSe4J9tplxZ0xkbRvZpMofZQAbkiTvFLhe1SxgOFIyLtef4bXiSeJI6Gg9dKZOjojVa0-LOoYoC8ixLCayMmsiDxCTyFimojkkRFaOyZy6uu4UtkSvnTg5j9bmcbCEeOGc4LWHvEaEl3AO4s7oslC3BYAPmIV-iFKrDmu5XC-dE2x3TuemzfABT8fryc9oex66uLNKtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/users/anotherUserId/investments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"anotherUserId",
+						"investments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
