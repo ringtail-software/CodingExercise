@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "dedc7aaf-5a65-4480-950f-42555af384eb",
+		"name": "HTTPS InvestmentApiCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Securities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/securities/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"securities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Investments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/investments/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"investments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user - success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/users/4039a6b7-18dc-4c6f-928e-e4f2c1117ff5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users",
+						"4039a6b7-18dc-4c6f-928e-e4f2c1117ff5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user - not found 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/1111a1b1-11dc-1c1f-111e-e1f1c1111ff1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"1111a1b1-11dc-1c1f-111e-e1f1c1111ff1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single investment by id - success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/investments/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"investments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single investment by id - not found 404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/investments/111",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"investments",
+						"111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
