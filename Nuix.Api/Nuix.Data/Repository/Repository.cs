@@ -38,7 +38,7 @@ namespace Nuix.Data.Repository
 
         private void Initialize()
         {
-            // Make our dictionary keys case-insensitive.
+            // Case-insensitive.
             Clients = new Dictionary<string, IEnumerable<Investment>>(StringComparer.OrdinalIgnoreCase)
             {
                 ["Mark"] = new List<Investment>()
