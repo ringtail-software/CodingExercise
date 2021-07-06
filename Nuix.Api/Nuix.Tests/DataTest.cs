@@ -1,6 +1,8 @@
-using System;
-using System.Linq;
+using Moq;
 using Nuix.Data.Repository;
+using Nuix.Data.Repository.MoqData;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Nuix.Tests
@@ -11,13 +13,22 @@ namespace Nuix.Tests
     {
         public DataTest()
         {
-            _sut = new Repository();
+            var data = new Data.Repository.MoqData.Data().ClientFactory();
+
+            var mockedData = new Mock<IData>();
+
+            mockedData.Setup(x => x.ClientFactory()).Returns(data);
+
+            _sut = new Repository(mockedData.Object);
         }
 
         [Fact(Skip =  "Just playing.")]
         [Trait("Category", "Ignore")]
         public async void HereBeDragoons()
         {
+            // Shut the compiler up.
+            await Task.CompletedTask;
+
             Assert.True(false);
         }
 

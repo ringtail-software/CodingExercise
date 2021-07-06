@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Nuix.Data.Dto;
 using Nuix.Data.Model;
 using Nuix.Data.Repository;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Nuix.Api.Controllers
 {
