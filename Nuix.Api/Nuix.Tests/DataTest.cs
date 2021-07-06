@@ -13,13 +13,13 @@ namespace Nuix.Tests
     {
         public DataTest()
         {
-            var data = new Data.Repository.MoqData.Data().ClientFactory();
+            var testData = new Data.Repository.MoqData.Data().ClientFactory();
 
-            var mockedData = new Mock<IData>();
+            var mock = new Mock<IData>();
 
-            mockedData.Setup(x => x.ClientFactory()).Returns(data);
+            mock.Setup(x => x.ClientFactory()).Returns(testData);
 
-            _sut = new Repository(mockedData.Object);
+            _sut = new Repository(mock.Object);
         }
 
         [Fact(Skip =  "Just playing.")]
