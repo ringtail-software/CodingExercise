@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Nuix.Data.Repository;
+using Nuix.Data.Repository.MoqData;
 
 namespace Nuix.Api
 {
@@ -29,6 +30,8 @@ namespace Nuix.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nuix.Api", Version = "v1" });
             });
+
+            services.AddScoped<IData, Data.Repository.MoqData.Data>();
 
             services.AddScoped<IRepository, Repository>();
 
