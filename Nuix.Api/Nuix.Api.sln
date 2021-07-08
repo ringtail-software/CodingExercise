@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuix.Api", "Nuix.Api\Nuix.Api.csproj", "{28045ECE-07F6-4D75-87CA-A69B3C4C82C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuix.Data", "Nuix.Data\Nuix.Data.csproj", "{E267BBD3-05AD-4E38-8180-45080D628C53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuix.Tests", "Nuix.Tests\Nuix.Tests.csproj", "{EAC8065B-4B8B-44A7-8F10-AC727C90C9C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28045ECE-07F6-4D75-87CA-A69B3C4C82C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28045ECE-07F6-4D75-87CA-A69B3C4C82C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28045ECE-07F6-4D75-87CA-A69B3C4C82C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28045ECE-07F6-4D75-87CA-A69B3C4C82C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E267BBD3-05AD-4E38-8180-45080D628C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E267BBD3-05AD-4E38-8180-45080D628C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E267BBD3-05AD-4E38-8180-45080D628C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E267BBD3-05AD-4E38-8180-45080D628C53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC8065B-4B8B-44A7-8F10-AC727C90C9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC8065B-4B8B-44A7-8F10-AC727C90C9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC8065B-4B8B-44A7-8F10-AC727C90C9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC8065B-4B8B-44A7-8F10-AC727C90C9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {661771BB-1362-42C9-923B-6B467D1056BF}
+	EndGlobalSection
+EndGlobal
